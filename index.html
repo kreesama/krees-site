@@ -1,158 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Krees — Hip Hop Choreo • Lab • Sessions • Direction de mouvement</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cours Hip Hop, ateliers freestyle, sessions privées, coaching artistes, direction de mouvement, chorégraphie et interventions créatives. Paris • Bruxelles.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --bg:#0b0b0c; --card:#121214; --text:#f2f2f2; --muted:#b9bbc2; --accent:#8a7bff; --accent2:#ff5c7a; --line:#242427; }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    a{color:var(--text);text-decoration:none}
-    .wrap{max-width:1080px;margin:0 auto;padding:28px}
-    .nav{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}
-    .logo{font-weight:800;letter-spacing:.5px}
-    .pill{padding:10px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:14px}
-    .hero{display:grid;gap:22px;padding:40px 0 28px}
-    .eyebrow{color:var(--muted);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
-    h1{font-size:40px;line-height:1.05;margin:0}
-    .lead{color:var(--muted);font-size:18px;max-width:62ch}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .btn{padding:12px 16px;border-radius:12px;font-weight:600;border:1px solid var(--line);background:linear-gradient(180deg,#1a1a1d,#121214)}
-    .btn--accent{background:linear-gradient(180deg,var(--accent),#5c4bff);border:none;color:white}
-    .grid{display:grid;gap:16px}
-    @media(min-width:900px){ .grid{grid-template-columns:repeat(3,1fr)} }
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:8px}
-    .k{color:var(--accent);font-weight:700}
-    .muted{color:var(--muted)}
-    h2{font-size:28px;margin:26px 0 8px}
-    h3{font-size:18px;margin:10px 0 4px}
-    .section{padding:26px 0;border-top:1px solid var(--line)}
-    .list{margin:8px 0 0 0;padding:0 0 0 18px;color:var(--muted)}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-size:12px;margin-right:6px}
-    .two{display:grid;gap:16px}
-    @media(min-width:900px){ .two{grid-template-columns:1.1fr .9fr} }
-    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-    .chips{display:flex;gap:8px;flex-wrap:wrap}
-    .note{font-size:13px;color:var(--muted)}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Krees Sama • Hip Hop • Workshops • Direction de mouvement</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="wrap nav">
-    <div class="logo">Krees<span class="k"> • Hip Hop</span></div>
-    <nav class="chips">
-      <a class="pill" href="#services">Services</a>
-      <a class="pill" href="#artists">Artistes</a>
-      <a class="pill" href="#workshops">Workshops</a>
-      <a class="pill" href="#contact">Contact</a>
+  <header class="site-header">
+    <div class="brand">
+      <a href="/">Krees Sama</a>
+      <span class="tagline">Hip Hop • Transmission • Direction de mouvement</span>
+    </div>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="/">Accueil</a></li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false">Formations</button>
+          <ul class="dropdown">
+            <li><a href="pages/workshops.html">Workshops</a></li>
+            <li><a href="pages/services.html">HipHopClass</a></li>
+            <li><a href="pages/coaching.html">HipHopPrivate</a></li>
+            <li><a href="pages/artists.html">Accompagnement artistes</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false">Pour les structures</button>
+          <ul class="dropdown">
+            <li><a href="pages/corporate.html">Entreprises écoles marques</a></li>
+            <li><a href="pages/workshops.html#pro">Tarifs pro</a></li>
+          </ul>
+        </li>
+
+        <li><a href="pages/contact.html" class="cta">Devis et réservation</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="eyebrow">Paris • Bruxelles</div>
-      <h1>Danse hip hop, freestyle et direction de mouvement pour la scène, l’image et l’apprentissage</h1>
-      <p class="lead">Cours et ateliers. Sessions privées. Coaching artistes. Chorégraphie et gestion d’équipes. Interventions pour écoles et entreprises. Mon job&nbsp: rendre la danse lisible, habitée et cohérente avec ton univers.</p>
-      <div class="cta">
-        <a class="btn btn--accent" href="https://wa.me/33663841018" target="_blank" rel="noopener">Réserver sur WhatsApp</a>
-        <a class="btn" href="mailto:cie.eessa@gmail.com">Écrire un e-mail</a>
-        <a class="btn" href="#services">Voir les services</a>
+  <main class="hero">
+    <div class="hero-inner">
+      <h1>Danse hip hop freestyle pédagogie et scène</h1>
+      <p>Des workshops intensifs des cours réguliers du coaching privé une direction de mouvement pour la scène le clip et la prise de parole. Un cadre clair une approche humaine des résultats concrets.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="pages/workshops.html">Voir les workshops</a>
+        <a class="btn secondary" href="pages/contact.html">Demander un devis</a>
       </div>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Formats pédagogiques</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Hip Hop Choreo</h3>
-          <p class="muted">Routine sur 2 à 3 séances. Musicalité, précision, clarté, présence. Tout niveau.</p>
-          <div class="chips"><span class="badge">20€</span><span class="badge">Paris 4</span></div>
-        </article>
-        <article class="card">
-          <h3>HipHopLab</h3>
-          <p class="muted">Atelier freestyle 2h. Moteurs, textures, directions, énergie, lecture musicale, densité, intention.</p>
-          <div class="chips"><span class="badge">20€</span><span class="badge">Paris 13</span></div>
-        </article>
-        <article class="card">
-          <h3>HipHopSession</h3>
-          <p class="muted">Mini-groupe 3 pers max. Corrections ciblées et progression rapide.</p>
-          <div class="chips"><span class="badge">50€ / pers</span></div>
-        </article>
-      </div>
-
-      <div class="grid" style="margin-top:16px">
-        <article class="card">
-          <h3>HipHopPrivates</h3>
-          <p class="muted">Cours particulier 1h. Technique, posture, groove, présence ou objectif spécifique.</p>
-          <div class="chips"><span class="badge">80€ / h</span><span class="badge">dégressif</span></div>
-        </article>
-        <article class="card">
-          <h3>Workshops écoles</h3>
-          <p class="muted">2h 3h ou mini-résidence 6-12h. Thèmes groove textures spatialité transitions connecteurs clarté impact.</p>
-          <div class="chips"><span class="badge">Tout niveau</span><span class="badge">FR / EN</span></div>
-        </article>
-        <article class="card">
-          <h3>Entreprises & institutions</h3>
-          <p class="muted">Mouvement comme langage collectif. Posture non-verbal respiration créativité. Experts invités si besoin.</p>
-          <div class="chips"><span class="badge">Team</span><span class="badge">Event</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="artists" class="section two">
-      <div>
-        <h2>Artistes • Direction de mouvement & coaching scénique</h2>
-        <p class="muted">Aligner musique corps intention. Lire le mouvement naturel, clarifier le geste, construire un univers corporel cohérent et une présence scénique qui tient la scène et la caméra.</p>
-        <ul class="list">
-          <li>Direction de mouvement gestes-signature appuis respiration regard</li>
-          <li>Coaching scénique espace silences charisme adresse public</li>
-          <li>Identité artistique langage corporel cohérent avec l’univers</li>
-          <li>Chorégraphie sur mesure pour artiste danseurs figurants</li>
-          <li>Clips shows TV pubs shootings coordination plateau</li>
-          <li>Possibilité d’inviter des chorégraphes spécialisés krump house heels afro contemporain etc</li>
-        </ul>
-      </div>
-      <aside class="card">
-        <h3>Résultat attendu</h3>
-        <p class="muted">Une présence lisible et assumée. Une gestuelle qui te ressemble. Un public qui comprend ce qu’il ressent.</p>
-        <h3>Formats</h3>
-        <p class="muted">1h focus 2h session complète packs de suivi pour préparation clip live ou sortie.</p>
-        <h3>Lieu</h3>
-        <p class="muted">Outdoor studio ou home training Paris Bruxelles</p>
-      </aside>
-    </section>
-
-    <section id="workshops" class="section">
-      <h2>Summer Workshops</h2>
-      <p class="muted">6 jours 18h montée progressive en extérieur. Textures impro musicalité transitions duos conscience collective freestyle densité. Tarifs repères 150€ semaine 110€ pack 4 jours 30€ séance.</p>
-    </section>
-
-    <section class="section">
-      <h2>Interventions créatives pour marques et organisations</h2>
-      <p class="muted">Direction de mouvement choré gestuelle stylée casting danse coordination figurants identité de mouvement pour image marque pub campagne événement interne.</p>
-    </section>
-
-    <section id="contact" class="section two">
-      <div>
-        <h2>Contact</h2>
-        <p class="muted">Dis m’en plus sur ton besoin. Je te propose un format clair un planning et un budget.</p>
-        <p><a class="btn btn--accent" href="https://wa.me/33663841018" target="_blank" rel="noopener">WhatsApp</a>
-           <a class="btn" href="mailto:cie.eessa@gmail.com">Email</a></p>
-        <p class="note">Règlements en espèces acceptés pour les cours. FR et EN.</p>
-      </div>
-      <div class="card">
-        <h3>À propos</h3>
-        <p class="muted">Danseur chorégraphe pédagogue direction de mouvement. J’aide élèves et artistes à clarifier leur danse et leur présence. Accessible mais exigeant technique et humain.</p>
-      </div>
-    </section>
+      <p class="micro">Paris Bruxelles Europe • Français Anglais • Déplacements possibles</p>
+    </div>
   </main>
 
-  <footer class="wrap">
-    <div>© <span id="y"></span> Krees — Paris • Bruxelles</div>
+  <section class="cards">
+    <article class="card">
+      <h2>HipHopClass</h2>
+      <p>Choreo routines training propre et progressif. Objectif clarté du mouvement musicalité mémorisation confiance scénique.</p>
+      <a href="pages/services.html" class="link">Détails et formats</a>
+    </article>
+
+    <article class="card">
+      <h2>HipHopLab</h2>
+      <p>Ateliers freestyle moteurs textures musicalité transitions densité. Méthodes concrètes pour gagner en lisibilité et présence.</p>
+      <a href="pages/workshops.html" class="link">Thèmes et tarifs</a>
+    </article>
+
+    <article class="card">
+      <h2>HipHopPrivate</h2>
+      <p>Coaching individuel ou duo. Bilan objectifs programme sur mesure. Préparation auditions tournages shows.</p>
+      <a href="pages/coaching.html" class="link">Coaching et packs</a>
+    </article>
+
+    <article class="card">
+      <h2>Direction de mouvement</h2>
+      <p>Accompagnement artistes et marques. Scénographie du geste identité mouvement coaching scène et caméra.</p>
+      <a href="pages/artists.html" class="link">Offre artistes</a>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <p>Contact direct WhatsApp 06 63 84 10 18 • Email <a href="mailto:contact@krees-sama.com?subject=Demande%20devis">contact@krees-sama.com</a></p>
+    <p><a href="pages/mentions.html">Mentions légales</a></p>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
