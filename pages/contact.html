@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact et devis • Krees Sama</title>
+  <title>Contact • Krees Sama Hip Hop</title>
+  <meta name="description" content="Contact direct pour cours workshops coaching direction de mouvement." />
   <link rel="stylesheet" href="../styles.css" />
-  <script defer src="../script.js"></script>
+  <style>
+    body{background:#0b0b0d;color:#e9e9ee;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:900px;margin:0 auto;padding:24px}
+    .card{background:linear-gradient(180deg,#13131a,#0e0e13);border:1px solid #1f1f27;border-radius:16px;padding:18px}
+    .cta{display:inline-block;background:linear-gradient(90deg,#7b5cff,#22d3ee);color:#0b0b0d;font-weight:800;padding:12px 16px;border-radius:12px;margin-top:8px;text-decoration:none}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media(max-width:860px){.row{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="brand"><a href="/">Krees Sama</a><span class="tagline">Devis et réservations</span></div>
-  <nav class="nav"><button class="nav-toggle">Menu</button>
-    <ul id="menu" class="menu">
-      <li><a href="/">Accueil</a></li>
-      <li><a href="workshops.html">Workshops</a></li>
-    </ul>
-  </nav>
-</header>
+  <main class="wrap">
+    <h1>Contact</h1>
 
-<main class="cards">
-  <article class="card">
-    <h2>Demande de devis</h2>
-    <p>Précise la ville la date le format la durée l’effectif le niveau et ton objectif. Réponse sous 24h.</p>
-    <p><a class="btn" href="mailto:contact@krees-sama.com?subject=Demande%20devis&body=Bonjour%20Krees%2C%0A%0AType%20de%20prestation%20%28workshop%2Fcoaching%2Fdirection%20de%20mouvement%29%20%3A%0ADate%20souhait%C3%A9e%20%3A%0ALieu%20%3A%0ADur%C3%A9e%20%3A%0AEffectif%20%3A%0ANiveau%20%3A%0AObjectif%20%3A%0APr%C3%A9cisions%20%3A%0A%0AMerci%20%21">Envoyer un email</a></p>
-    <p>WhatsApp 06 63 84 10 18</p>
-  </article>
-</main>
+    <div class="row">
+      <section class="card">
+        <h2>Email</h2>
+        <p>
+          <a href="mailto:krees.sama@gmail.com?subject=Demande%20d%E2%80%99infos%20%2F%20devis&body=Bonjour%20Krees%2C">krees.sama@gmail.com</a>
+        </p>
+        <a class="cta" href="mailto:krees.sama@gmail.com?subject=Demande%20d%E2%80%99infos%20%2F%20devis">Écrire un email</a>
+      </section>
 
-<footer class="site-footer">
-  <p>Paris Bruxelles Europe</p>
-</footer>
+      <section class="card">
+        <h2>Téléphone et WhatsApp</h2>
+        <p><a href="tel:+33663841018">+33 6 63 84 10 18</a></p>
+        <a class="cta" href="https://wa.me/33663841018?text=Bonjour%20Krees%2C%20je%20souhaite%20des%20infos">Ouvrir WhatsApp</a>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:18px">
+      <h2>Brief rapide pour un devis</h2>
+      <p>Copie colle la trame ci-dessous dans ton message.</p>
+      <pre style="white-space:pre-wrap;background:#0b0b0d;border:1px solid #1f1f27;border-radius:12px;padding:12px">
+Contexte clip live workshop coaching
+Lieu et date
+Durée souhaitée
+Nombre de participants
+Objectif principal
+Budget indicatif
+      </pre>
+    </section>
+
+    <p style="margin-top:18px">
+      <a href="../index.html">Retour à l’accueil</a>
+    </p>
+  </main>
 </body>
 </html>
