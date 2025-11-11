@@ -1,9 +1,13 @@
-const toggle = document.querySelector(".nav-toggle");
-const menu = document.querySelector(".menu");
-if(toggle){
-  toggle.addEventListener("click", ()=> menu.classList.toggle("show"));
-}
-menu?.querySelectorAll("a").forEach(a=>{
-  a.addEventListener("click", ()=> menu.classList.remove("show"));
-});
-document.getElementById("year").textContent = new Date().getFullYear();
+document.querySelectorAll('.has-sub .subbtn').forEach(btn=>{
+  btn.addEventListener('click', e=>{
+    e.currentTarget.parentElement.classList.toggle('open')
+  })
+})
+
+document.getElementById('year')?.append(new Date().getFullYear())
+
+// rendre le logo vers l accueil et stylisé premium
+document.querySelectorAll('.brand').forEach(a=>{
+  a.addEventListener('mouseenter', ()=> a.style.filter='brightness(1.2)')
+  a.addEventListener('mouseleave', ()=> a.style.filter='')
+})
