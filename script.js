@@ -1,4 +1,3 @@
-// script.js  remplacer intégralement ton fichier par ce code
 const toggle = document.querySelector(".nav-toggle");
 const menu = document.querySelector(".menu");
 if(toggle){
