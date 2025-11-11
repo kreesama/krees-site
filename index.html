@@ -1,166 +1,138 @@
-<!-- index.html  FR  -->
+<!-- en/index.html  EN  -->
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Krees Sama — Mouvement utile. Résultats visibles.</title>
-  <link href="styles.css" rel="stylesheet">
-  <!-- Fonts -->
+  <title>Krees Sama — Clear moves. Dance real.</title>
+  <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+  <script defer src="../script.js"></script>
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="index.html" aria-label="Accueil">Krees&nbsp;Sama</a>
+    <a class="brand" href="../index.html" aria-label="Home">Krees&nbsp;Sama</a>
 
     <nav class="menu">
       <div class="dd">
         <button class="dd-btn">HipHop Choreo</button>
         <div class="dd-panel">
-          <a href="#vendredi">Cours du vendredi</a>
-          <a href="#cartes">Cartes 5 et 10 cours</a>
-          <a href="#infos">Infos pratiques</a>
+          <a href="#friday">Friday class</a>
+          <a href="#passes">5 and 10 class passes</a>
+          <a href="#info">Practical info</a>
         </div>
       </div>
 
       <div class="dd">
         <button class="dd-btn">HipHopLab</button>
         <div class="dd-panel">
-          <a href="#lab">Ateliers freestyle</a>
-          <a href="#lab-themes">Thèmes et méthodes</a>
-          <a href="#lab-cal">Calendrier</a>
+          <a href="#lab">Freestyle labs</a>
+          <a href="#lab-themes">Themes and methods</a>
+          <a href="#lab-cal">Schedule</a>
         </div>
       </div>
 
       <div class="dd">
         <button class="dd-btn">Workshops</button>
         <div class="dd-panel">
-          <a href="#workshops-collectifs">Collectifs pour écoles et studios</a>
-          <a href="#workshops-marques">Marques et événements</a>
+          <a href="#group">For schools and studios</a>
+          <a href="#brands">Brands and events</a>
         </div>
       </div>
 
       <div class="dd">
-        <button class="dd-btn">Artistes</button>
+        <button class="dd-btn">Artists</button>
         <div class="dd-panel">
-          <a href="#coaching">Coaching de présence</a>
-          <a href="#direction">Direction de mouvement</a>
-          <a href="#choreo">Chorégraphie clips et live</a>
+          <a href="#presence">Presence coaching</a>
+          <a href="#movement">Movement direction</a>
+          <a href="#stage">Choreography clips and live</a>
         </div>
       </div>
 
-      <a class="link" href="#about">À propos</a>
+      <a class="link" href="#about">About</a>
       <a class="link" href="#contact">Contact</a>
 
       <div class="icons">
         <a class="icon" href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp">
-          <!-- WhatsApp SVG officiel -->
-          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19.11 17.25c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.89 1.08-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.23-1.37-.82-.73-1.37-1.63-1.53-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.47h-.54c-.19 0-.5.07-.76.35-.26.28-1 1-1 2.45s1.03 2.84 1.17 3.03c.14.19 2.03 3.1 4.92 4.35.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.65-.67 1.88-1.31.23-.64.23-1.19.16-1.31-.07-.11-.26-.18-.54-.32zM16.03 4C9.84 4 4.84 8.99 4.84 15.19c0 2.01.53 3.99 1.54 5.73L4 28l7.25-2.3c1.67.91 3.56 1.39 5.49 1.39 6.19 0 11.19-5 11.19-11.19 0-6.2-5-11.2-11.9-11.2zM16.74 25.6c-1.76 0-3.48-.47-4.99-1.35l-.36-.21-4.3 1.36 1.4-4.19-.23-.37a9.4 9.4 0 0 1-1.44-5c0-5.2 4.23-9.43 9.43-9.43 5.2 0 9.43 4.23 9.43 9.43 0 5.19-4.23 9.42-9.94 9.42z"/></svg>
+          <svg viewBox="0 0 32 32" width="20" height="20"><path fill="currentColor" d="M19.11 17.25c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.89 1.08-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.23-1.37-.82-.73-1.37-1.63-1.53-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.47h-.54c-.19 0-.5.07-.76.35-.26.28-1 1-1 2.45s1.03 2.84 1.17 3.03c.14.19 2.03 3.1 4.92 4.35.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.65-.67 1.88-1.31.23-.64.23-1.19.16-1.31-.07-.11-.26-.18-.54-.32zM16.03 4C9.84 4 4.84 8.99 4.84 15.19c0 2.01.53 3.99 1.54 5.73L4 28l7.25-2.3c1.67.91 3.56 1.39 5.49 1.39 6.19 0 11.19-5 11.19-11.19 0-6.2-5-11.2-11.9-11.2zM16.74 25.6c-1.76 0-3.48-.47-4.99-1.35l-.36-.21-4.3 1.36 1.4-4.19-.23-.37a9.4 9.4 0 0 1-1.44-5c0-5.2 4.23-9.43 9.43-9.43 5.2 0 9.43 4.23 9.43 9.43 0 5.19-4.23 9.42-9.94 9.42z"/></svg>
         </a>
         <a class="icon" href="https://www.instagram.com/kreesama" target="_blank" aria-label="Instagram">
-          <!-- Instagram SVG officiel -->
-          <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M224 202a54 54 0 1 0 0 108 54 54 0 1 0 0-108zm124-41c0-13-10-23-23-23h-42c-13 0-23 10-23 23v42c0 13 10 23 23 23h42c13 0 23-10 23-23v-42zM448 80v352c0 44-36 80-80 80H80c-44 0-80-36-80-80V80C0 36 36 0 80 0h288c44 0 80 36 80 80zM224 150c79 0 144 65 144 144s-65 144-144 144S80 373 80 294 145 150 224 150z"/></svg>
+          <svg viewBox="0 0 448 512" width="20" height="20"><path fill="currentColor" d="M224 202a54 54 0 1 0 0 108 54 54 0 1 0 0-108zm124-41c0-13-10-23-23-23h-42c-13 0-23 10-23 23v42c0 13 10 23 23 23h42c13 0 23-10 23-23v-42zM448 80v352c0 44-36 80-80 80H80c-44 0-80-36-80-80V80C0 36 36 0 80 0h288c44 0 80 36 80 80zM224 150c79 0 144 65 144 144s-65 144-144 144S80 373 80 294 145 150 224 150z"/></svg>
         </a>
-        <a class="lang" href="en/index.html">EN</a>
+        <a class="lang" href="../index.html">FR</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="top">
-      <p class="kicker">Paris Bruxelles Europe Monde</p>
-      <h1 class="hero-title"><span>Bouger plus clair.</span> <span>Danser plus vrai.</span></h1>
-      <p class="sub">Des formats simples qui donnent des résultats visibles. Cours collectifs ateliers de recherche workshops immersifs direction de mouvement pour artistes coaching de présence.</p>
+    <section class="hero">
+      <p class="kicker">Paris Brussels Europe Worldwide</p>
+      <h1 class="hero-title"><span>Clear moves.</span> <span>Dance real.</span></h1>
+      <p class="sub">Simple formats visible results. Weekly classes freestyle labs immersive workshops movement direction and presence coaching for artists.</p>
       <div class="cta">
-        <a class="btn primary" href="https://wa.me/33663841018" target="_blank">Réserver un cours</a>
-        <a class="btn ghost" href="https://wa.me/33663841018?text=Bonjour%20Krees%2C%20je%20souhaite%20un%20appel%20d%C3%A9couverte%20de%2015%20min." target="_blank">Appel découverte 15 min</a>
+        <a class="btn primary" href="https://wa.me/33663841018" target="_blank">Book a class</a>
+        <a class="btn ghost" href="https://wa.me/33663841018?text=Hi%20Krees%2C%2015min%20discovery%20call%20please." target="_blank">Discovery call 15 min</a>
       </div>
-      <p class="tag">Clear moves. Dance real.</p>
+      <p class="tag">Move clear. Dance real.</p>
     </section>
 
-    <section id="vendredi" class="block">
-      <h2 class="h">Cours du vendredi</h2>
-      <p>20h30-22h00 Centre de Danse du Marais 41 rue du Temple Paris salle Mozart.</p>
-      <p>Choré sur deux ou trois séances pour laisser le temps d’entrer dans la matière. Tous niveaux bienvenus.</p>
-      <div class="line-cta">
-        <a class="btn sm" href="https://wa.me/33663841018?text=Vendredi%2020h30%20je%20r%C3%A9serve" target="_blank">Réserver vendredi</a>
-        <a class="btn sm" href="https://www.instagram.com/direct/t/101" target="_blank">DM Instagram</a>
-      </div>
+    <section id="friday" class="block">
+      <h2 class="h">Friday class</h2>
+      <p>20:30-22:00 Centre de Danse du Marais Paris salle Mozart. Two or three sessions per routine. All levels welcome.</p>
+    </section>
+
+    <section id="passes" class="block">
+      <h2 class="h">5 and 10 class passes</h2>
+      <p>Valid for Friday classes and for Saturday HipHopLab when scheduled.</p>
     </section>
 
     <section id="lab" class="block">
-      <h2 class="h">HipHopLab  ateliers freestyle</h2>
-      <p>Samedi matin 10h-12h selon calendrier. Travail de fond sur moteurs directions niveaux musicalité intentions densité. Objectif clarifier tes choix et rendre ta danse lisible forte personnelle.</p>
-      <div class="line-cta">
-        <a class="btn sm" href="https://wa.me/33663841018?text=HipHopLab%20samedi%2010-12%20je%20r%C3%A9serve" target="_blank">Réserver samedi</a>
-        <a class="btn sm" href="#lab-themes">Voir les thèmes</a>
-      </div>
+      <h2 class="h">HipHopLab</h2>
+      <p>Saturday 10:00-12:00 depending on calendar. Freestyle engines directions levels musicality intentions density.</p>
     </section>
 
-    <section id="cartes" class="block">
-      <h2 class="h">Cartes 5 et 10 cours</h2>
-      <p>Valables sur les cours du vendredi et sur les HipHopLab du samedi hors dates spéciales.</p>
-      <ul class="bul">
-        <li>Carte 5 cours économique et flexible</li>
-        <li>Carte 10 cours progression continue priorité d’inscription</li>
-      </ul>
-      <a class="btn sm" href="https://wa.me/33663841018?text=Info%20carte%205%20ou%2010%20cours" target="_blank">Demander infos</a>
+    <section id="group" class="block">
+      <h2 class="h">Group workshops</h2>
+      <p>For schools studios cultural spaces. Tailored content 300 to 500€ depending on time and scope.</p>
     </section>
 
-    <section id="workshops-collectifs" class="block">
-      <h2 class="h">Workshops collectifs</h2>
-      <p>Journées et semaines thématiques pour écoles studios centres culturels. Formats sur mesure 300 à 500€ selon durée contenu logistique.</p>
-      <ul class="bul">
-        <li>Textures appuis transformation du corps</li>
-        <li>Improvisation structurée musicalité groove</li>
-        <li>Transitions connecteurs spatialité</li>
-        <li>Freestyle densité et présence</li>
-      </ul>
-      <a class="btn sm" href="mailto:krees.sama@gmail.com?subject=Devis%20Workshop%20collectif">Demander un devis</a>
+    <section id="brands" class="block">
+      <h2 class="h">Brands and events</h2>
+      <p>Movement modules for activations campaigns team building. Past work includes H&amp;M Adidas Jordan McDonald’s Galeries Lafayette Sweet Pants Shelter Suit J&amp;B.</p>
     </section>
 
-    <section id="workshops-marques" class="block">
-      <h2 class="h">Marques et événements</h2>
-      <p>Conception et direction de modules autour du mouvement pour activations campagnes teambuildings. Références  H&amp;M  Adidas  Jordan  McDonald’s  Galeries Lafayette  Sweet Pants  Shelter Suit  J&amp;B.</p>
-      <a class="btn sm" href="mailto:krees.sama@gmail.com?subject=Demande%20d%27intervention%20marque%20ou%20%C3%A9v%C3%A9nement">Parler d’un projet</a>
+    <section id="presence" class="block">
+      <h2 class="h">Presence coaching</h2>
+      <p>Posture voice nonverbal use of space audience address. Keep the artist’s identity intact while raising impact on stage and on camera.</p>
     </section>
 
-    <section id="coaching" class="block">
-      <h2 class="h">Coaching de présence pour artistes</h2>
-      <p>Accompagnement sur la posture la voix le non verbal l’usage de l’espace l’adresse au public. Objectif mieux habiter scène et caméra sans trahir l’identité de l’artiste.</p>
+    <section id="movement" class="block">
+      <h2 class="h">Movement direction</h2>
+      <p>Design a coherent movement language. Intentions body pathways rhythm breath staging.</p>
     </section>
 
-    <section id="direction" class="block">
-      <h2 class="h">Direction de mouvement</h2>
-      <p>Construction d’un langage gestuel cohérent avec l’univers. Travail sur intentions chemins de corps rythmes respirations placements.</p>
-    </section>
-
-    <section id="choreo" class="block">
-      <h2 class="h">Chorégraphie clips et live</h2>
-      <p>De quelques figurants à plusieurs danseurs organisation des tableaux coaching plateau coordination répétitions casting partenaires spécialisés si besoin.</p>
-      <a class="btn sm" href="mailto:krees.sama@gmail.com?subject=Chor%C3%A9graphie%20clip%2Flive">Demander un devis</a>
+    <section id="stage" class="block">
+      <h2 class="h">Choreography clips and live</h2>
+      <p>From a few extras to a full dance team staging coaching casting specialized partners when needed.</p>
     </section>
 
     <section id="about" class="block">
-      <h2 class="h">À propos</h2>
-      <p>Basé à Bruxelles je travaille entre Bruxelles et Paris mobile en Europe et au delà. Ancré dans le hip hop freestyle je transmets depuis 2010 en cours ateliers et workshops. Ma ligne une esthétique honnête précise lisible au service des personnes et des projets.</p>
+      <h2 class="h">About</h2>
+      <p>Based in Brussels working between Brussels and Paris. Mobile across Europe and beyond. Hip hop freestyle background teaching since 2010 workshops and labs. Honest precise readable movement at the service of people and projects.</p>
     </section>
 
     <section id="contact" class="block">
-      <h2 class="h">Contact direct</h2>
-      <p>WhatsApp  +33 6 63 84 10 18</p>
-      <p>Instagram  @kreesama</p>
+      <h2 class="h">Contact</h2>
       <div class="line-cta">
         <a class="btn" href="https://wa.me/33663841018" target="_blank">WhatsApp</a>
         <a class="btn" href="https://www.instagram.com/kreesama" target="_blank">Instagram</a>
-        <a class="btn" href="mailto:krees.sama@gmail.com">Mail devis</a>
+        <a class="btn" href="mailto:krees.sama@gmail.com">Email for quotes</a>
       </div>
     </section>
   </main>
 
   <footer class="ft">
-    <p>© <span id="y"></span> Krees Sama. Tous droits réservés.</p>
+    <p>© <span id="y"></span> Krees Sama. All rights reserved.</p>
   </footer>
 </body>
 </html>
