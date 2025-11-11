@@ -5,12 +5,10 @@
   --text:#e8e8ef;
   --muted:#b9bbcf;
   --brand:#7b5cff;
-  --accent:#ff4d6d;
   --line:#26263a;
-  --ok:#25D366;
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 80% -10%,rgba(123,92,255,.25),transparent),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
 a{color:inherit;text-decoration:none}
 h1{font-size:clamp(40px,6vw,72px);line-height:1.02;margin:.2rem 0 1rem}
 h2{font-size:clamp(28px,3.2vw,40px);margin:0 0 .5rem}
@@ -42,14 +40,15 @@ p{color:var(--muted);font-size:16px;line-height:1.6;margin:.2rem 0 1rem}
 .cta.stroke{border:1px solid var(--brand);color:#c9c3ff}
 .row{display:flex;gap:10px;flex-wrap:wrap}
 
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;padding:80px 24px 40px;max-width:1120px;margin:0 auto}
-.hero-art{border-radius:24px;background:radial-gradient(400px 240px at 70% 20%,rgba(255,77,109,.15),transparent),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);min-height:360px}
-.hero-cta{display:flex;gap:12px;margin:18px 0}
-.socials{display:flex;gap:10px;margin-top:10px}
+.hero{max-width:960px;margin:0 auto;padding:80px 24px 24px}
+.hero-center{text-align:center}
+.hero-cta{display:flex;gap:12px;justify-content:center;margin:18px 0}
+.socials{display:flex;gap:10px;justify-content:center;margin-top:10px}
 .chip{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .8rem;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.02)}
 .chip img{width:16px;height:16px}
 
 .trust{max-width:1120px;margin:40px auto;padding:0 24px}
+.trust h2{text-align:center}
 .logos{list-style:none;display:grid;grid-template-columns:repeat(8,1fr);gap:8px;padding:0;margin:14px 0}
 .logos li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center;color:#d7daee;font-weight:700}
 
@@ -59,7 +58,8 @@ p{color:var(--muted);font-size:16px;line-height:1.6;margin:.2rem 0 1rem}
 .grid{display:grid;gap:16px}
 .grid.two{grid-template-columns:repeat(2,1fr)}
 .grid.three{grid-template-columns:repeat(3,1fr)}
-@media (max-width:960px){.hero{grid-template-columns:1fr}.grid.two,.grid.three{grid-template-columns:1fr}}
+@media (max-width:960px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
 .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
 .benefits{margin:0;padding-left:18px;color:var(--muted)}
 .price{font-weight:700;color:#eaeafe}
