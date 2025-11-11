@@ -4,8 +4,8 @@
   --fg:#eaeaf2;
   --muted:#a7a7b3;
   --brand:#7c4dff;
-  --hero-font:'Playfair Display',serif;      /* police premium pour le slogan */
-  --ui-font:'Inter',system-ui,Arial,sans-serif; /* interface et corps */
+  --hero-font:'Playfair Display',serif;   /* premium pour le slogan */
+  --ui-font:'Inter',system-ui,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -20,14 +20,14 @@ body{
 /* nav */
 .nav{
   position:sticky; top:0; z-index:50;
-  background:rgba(11,11,16,.7); backdrop-filter: blur(8px);
+  background:rgba(11,11,16,.7); backdrop-filter:blur(8px);
   border-bottom:1px solid rgba(255,255,255,.06);
   padding:.6rem 1rem;
   display:flex; align-items:center; gap:1rem;
 }
 .brand{
   font-weight:800; letter-spacing:.2px; text-decoration:none; color:var(--fg);
-  padding:.4rem .6rem; border-radius:.6rem; border:1px solid rgba(255,255,255,.08);
+  padding:.45rem .7rem; border-radius:.6rem; border:1px solid rgba(255,255,255,.08);
 }
 .menu{display:flex; align-items:center; gap:.6rem; width:100%}
 .link{padding:.5rem .7rem; color:var(--fg); text-decoration:none; border-radius:.5rem}
@@ -44,36 +44,48 @@ body{
   color:var(--fg); padding:.5rem .7rem; border-radius:.6rem; cursor:pointer
 }
 .dd-panel{
-  position:absolute; left:0; top:calc(100% + .4rem); min-width:220px;
+  position:absolute; left:0; top:calc(100% + .4rem); min-width:240px;
   background:#11131a; border:1px solid rgba(255,255,255,.12); border-radius:.8rem;
   padding:.4rem; display:none; box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 .dd-panel a{
-  display:block; padding:.55rem .7rem; border-radius:.5rem; text-decoration:none; color:var(--fg)
+  display:block; padding:.55rem .75rem; border-radius:.5rem; text-decoration:none; color:var(--fg)
 }
 .dd-panel a:hover{background:rgba(255,255,255,.06)}
 .dd:hover .dd-panel{display:block}
 
-/* hero */
-.hero{max-width:980px; margin:7vh auto 4rem; padding:0 1.2rem; text-align:center}
+/* hero ultra centré façon Apple */
+.hero{
+  max-width:980px; margin:0 auto; padding:0 1.2rem;
+  text-align:center;
+}
+.hero-center{
+  min-height:82vh;            /* occupe l’écran */
+  display:grid; place-items:center;  /* centre vertical et horizontal */
+  align-content:center; gap:1.1rem;
+}
 .kicker{color:var(--muted); text-transform:uppercase; font-size:.82rem; letter-spacing:.12rem}
 .hero-title{
-  margin:.6rem 0 1rem;
-  font-family:var(--hero-font); font-weight:800; font-size: clamp(2.4rem,5vw,4rem); line-height:1.05;
+  margin:.2rem 0 .2rem;
+  font-family:var(--hero-font); font-weight:800; font-size:clamp(2.6rem,5.2vw,4.2rem); line-height:1.05;
 }
-.sub{max-width:760px; margin:0 auto 1.2rem; color:#c9c9d6}
-.cta{display:flex; justify-content:center; gap:.8rem; flex-wrap:wrap; margin:.6rem 0 0}
+.sub{max-width:900px; margin:0 auto; color:#c9c9d6}
+.sub-xl{font-size:clamp(1.02rem,1.15vw,1.12rem)}
+.cta{display:flex; justify-content:center; gap:.8rem; flex-wrap:wrap; margin:.2rem 0 0}
 .btn{display:inline-block; text-decoration:none; color:var(--fg); border:1px solid rgba(255,255,255,.16); padding:.7rem 1rem; border-radius:.8rem}
 .btn.primary{background:linear-gradient(135deg,var(--brand),#9a7cff)}
 .btn.ghost{background:transparent}
 .btn.sm{padding:.55rem .8rem; font-size:.95rem}
-.tag{margin:.9rem 0 0; color:var(--muted)}
+.tag{margin:.3rem 0 0; color:var(--muted)}
 
 /* sections */
 .block{max-width:980px; margin:4rem auto; padding:0 1.2rem}
+.block-narrow{max-width:820px}
 .h{font-size:1.6rem; margin:0 0 .4rem}
 .bul{margin:.4rem 0 1rem 1rem}
 .line-cta{display:flex; gap:.6rem; flex-wrap:wrap; margin:.6rem 0}
+.logos{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:.6rem; list-style:none; padding:0; margin:.6rem 0 0}
+.logos li{padding:.7rem 1rem; border:1px solid rgba(255,255,255,.12); border-radius:.8rem; text-align:center}
 
 /* footer */
 .ft{border-top:1px solid rgba(255,255,255,.1); padding:1.2rem; text-align:center; color:var(--muted)}
