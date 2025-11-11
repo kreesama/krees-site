@@ -1,185 +1,166 @@
-<!-- index.html  FR -->
+<!-- index.html  FR  -->
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Krees Sama • Mouvement utile résultats visibles</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Krees Sama — Mouvement utile. Résultats visibles.</title>
+  <link href="styles.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap nav-wrap">
-    <a class="brand" href="index.html" aria-label="Retour accueil">Krees Sama</a>
+  <header class="nav">
+    <a class="brand" href="index.html" aria-label="Accueil">Krees&nbsp;Sama</a>
 
-    <nav class="main-nav" aria-label="Navigation principale">
-      <ul>
-        <li class="has-sub"><a href="#choreo">HipHop Choreo</a>
-          <div class="dropdown">
-            <a href="#vendredi">Cours du vendredi</a>
-            <a href="#cartes">Cartes 5 et 10 cours</a>
-            <a href="#infos">Infos pratiques</a>
-          </div>
-        </li>
-        <li class="has-sub"><a href="#lab">HipHopLab</a>
-          <div class="dropdown">
-            <a href="#lab-themes">Thèmes et méthodes</a>
-            <a href="#lab-cal">Calendrier</a>
-          </div>
-        </li>
-        <li class="has-sub"><a href="#workshops">Workshops</a>
-          <div class="dropdown">
-            <a href="#workshops-formules">Formules</a>
-            <a href="#workshops-marques">Marques et évènements</a>
-          </div>
-        </li>
-        <li class="has-sub"><a href="#artistes">Artistes</a>
-          <div class="dropdown">
-            <a href="#coaching">Coaching de présence</a>
-            <a href="#direction">Direction de mouvement</a>
-            <a href="#chore">Chorégraphie clips et live</a>
-          </div>
-        </li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="lang"><a href="en/index.html" aria-label="Switch to English">EN</a></li>
-      </ul>
+    <nav class="menu">
+      <div class="dd">
+        <button class="dd-btn">HipHop Choreo</button>
+        <div class="dd-panel">
+          <a href="#vendredi">Cours du vendredi</a>
+          <a href="#cartes">Cartes 5 et 10 cours</a>
+          <a href="#infos">Infos pratiques</a>
+        </div>
+      </div>
+
+      <div class="dd">
+        <button class="dd-btn">HipHopLab</button>
+        <div class="dd-panel">
+          <a href="#lab">Ateliers freestyle</a>
+          <a href="#lab-themes">Thèmes et méthodes</a>
+          <a href="#lab-cal">Calendrier</a>
+        </div>
+      </div>
+
+      <div class="dd">
+        <button class="dd-btn">Workshops</button>
+        <div class="dd-panel">
+          <a href="#workshops-collectifs">Collectifs pour écoles et studios</a>
+          <a href="#workshops-marques">Marques et événements</a>
+        </div>
+      </div>
+
+      <div class="dd">
+        <button class="dd-btn">Artistes</button>
+        <div class="dd-panel">
+          <a href="#coaching">Coaching de présence</a>
+          <a href="#direction">Direction de mouvement</a>
+          <a href="#choreo">Chorégraphie clips et live</a>
+        </div>
+      </div>
+
+      <a class="link" href="#about">À propos</a>
+      <a class="link" href="#contact">Contact</a>
+
+      <div class="icons">
+        <a class="icon" href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp">
+          <!-- WhatsApp SVG officiel -->
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19.11 17.25c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.89 1.08-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.23-1.37-.82-.73-1.37-1.63-1.53-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.47h-.54c-.19 0-.5.07-.76.35-.26.28-1 1-1 2.45s1.03 2.84 1.17 3.03c.14.19 2.03 3.1 4.92 4.35.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.65-.67 1.88-1.31.23-.64.23-1.19.16-1.31-.07-.11-.26-.18-.54-.32zM16.03 4C9.84 4 4.84 8.99 4.84 15.19c0 2.01.53 3.99 1.54 5.73L4 28l7.25-2.3c1.67.91 3.56 1.39 5.49 1.39 6.19 0 11.19-5 11.19-11.19 0-6.2-5-11.2-11.9-11.2zM16.74 25.6c-1.76 0-3.48-.47-4.99-1.35l-.36-.21-4.3 1.36 1.4-4.19-.23-.37a9.4 9.4 0 0 1-1.44-5c0-5.2 4.23-9.43 9.43-9.43 5.2 0 9.43 4.23 9.43 9.43 0 5.19-4.23 9.42-9.94 9.42z"/></svg>
+        </a>
+        <a class="icon" href="https://www.instagram.com/kreesama" target="_blank" aria-label="Instagram">
+          <!-- Instagram SVG officiel -->
+          <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M224 202a54 54 0 1 0 0 108 54 54 0 1 0 0-108zm124-41c0-13-10-23-23-23h-42c-13 0-23 10-23 23v42c0 13 10 23 23 23h42c13 0 23-10 23-23v-42zM448 80v352c0 44-36 80-80 80H80c-44 0-80-36-80-80V80C0 36 36 0 80 0h288c44 0 80 36 80 80zM224 150c79 0 144 65 144 144s-65 144-144 144S80 373 80 294 145 150 224 150z"/></svg>
+        </a>
+        <a class="lang" href="en/index.html">EN</a>
+      </div>
     </nav>
+  </header>
 
-    <div class="social">
-      <a class="icon-btn" href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp">
-        <!-- WhatsApp SVG -->
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 15.03L2 22l5.12-1.34A10 10 0 1 0 12 2Zm0 2a8 8 0 0 1 6.47 12.66l-.2.26c-.28.35-.64.63-1.05.81A8 8 0 1 1 12 4Zm4.9 10.36c-.2-.1-1.18-.58-1.36-.65-.18-.06-.32-.1-.46.1-.13.2-.52.65-.64.78-.12.13-.24.15-.44.05-1.2-.6-1.98-1.07-2.77-2.42-.21-.37.21-.34.6-1.14.07-.13.03-.24-.02-.34-.06-.1-.46-1.1-.63-1.5-.17-.41-.34-.35-.47-.36h-.4c-.13 0-.34.05-.52.24-.18.2-.69.67-.69 1.64 0 .97.71 1.91.8 2.04.1.13 1.39 2.12 3.38 2.97.47.2.84.31 1.13.4.48.15.92.13 1.26.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.86.12-.95-.05-.1-.18-.16-.38-.26Z"/></svg>
-      </a>
-      <a class="icon-btn" href="https://www.instagram.com/kreesama" target="_blank" aria-label="Instagram">
-        <!-- Instagram SVG -->
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"/></svg>
-      </a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section id="hero" class="hero">
-    <div class="wrap hero-inner">
-      <p class="eyebrow">Paris Bruxelles Europe Monde</p>
-      <h1 class="hero-title">
-        Bouger plus clair. <span>Danser plus vrai.</span>
-      </h1>
-      <p class="hero-sub">Des formats simples qui donnent des résultats visibles. Cours collectifs ateliers de recherche workshops immersifs direction de mouvement pour artistes coaching de présence.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="#vendredi">Réserver un cours</a>
-        <a class="btn ghost" href="https://wa.me/33663841018" target="_blank">Appel découverte 15 min</a>
+  <main>
+    <section class="hero" id="top">
+      <p class="kicker">Paris Bruxelles Europe Monde</p>
+      <h1 class="hero-title"><span>Bouger plus clair.</span> <span>Danser plus vrai.</span></h1>
+      <p class="sub">Des formats simples qui donnent des résultats visibles. Cours collectifs ateliers de recherche workshops immersifs direction de mouvement pour artistes coaching de présence.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/33663841018" target="_blank">Réserver un cours</a>
+        <a class="btn ghost" href="https://wa.me/33663841018?text=Bonjour%20Krees%2C%20je%20souhaite%20un%20appel%20d%C3%A9couverte%20de%2015%20min." target="_blank">Appel découverte 15 min</a>
       </div>
-      <p class="tagline">Clear moves. Dance real.</p>
-    </div>
-  </section>
+      <p class="tag">Clear moves. Dance real.</p>
+    </section>
 
-  <section id="choreo" class="section">
-    <div class="wrap">
-      <h2>HipHop Choreo</h2>
-      <div class="grid two">
-        <article id="vendredi" class="card">
-          <h3>Cours du vendredi</h3>
-          <p>20h30 à 22h Centre de Danse du Marais 41 rue du Temple 75004 Paris salle Mozart. Tous niveaux. Routine sur deux à trois séances pour laisser le temps d’intégrer.</p>
-          <a class="btn sm" href="https://wa.me/33663841018" target="_blank">Réserver</a>
-        </article>
-        <article id="cartes" class="card">
-          <h3>Cartes 5 et 10 cours</h3>
-          <p>Valables sur les vendredis et sur les ateliers HipHopLab du samedi quand ils ont lieu. Non valables sur workshops longue durée.</p>
-          <a class="btn sm" href="https://wa.me/33663841018" target="_blank">Prendre une carte</a>
-        </article>
+    <section id="vendredi" class="block">
+      <h2 class="h">Cours du vendredi</h2>
+      <p>20h30-22h00 Centre de Danse du Marais 41 rue du Temple Paris salle Mozart.</p>
+      <p>Choré sur deux ou trois séances pour laisser le temps d’entrer dans la matière. Tous niveaux bienvenus.</p>
+      <div class="line-cta">
+        <a class="btn sm" href="https://wa.me/33663841018?text=Vendredi%2020h30%20je%20r%C3%A9serve" target="_blank">Réserver vendredi</a>
+        <a class="btn sm" href="https://www.instagram.com/direct/t/101" target="_blank">DM Instagram</a>
       </div>
-      <article id="infos" class="note">
-        <h4>Infos pratiques</h4>
-        <p>Tenue confortable baskets bouteille d’eau. Règlement en espèces à l’arrivée. Annulation 48h avant sinon séance due.</p>
-      </article>
-    </div>
-  </section>
+    </section>
 
-  <section id="lab" class="section alt">
-    <div class="wrap">
-      <h2>HipHopLab</h2>
-      <article id="lab-themes" class="card">
-        <h3>Thèmes et méthodes</h3>
-        <p>Moteurs directions niveaux musicalité groove textures transitions connecteurs densité personnage intention storytelling freestyle lisible.</p>
-      </article>
-      <article id="lab-cal" class="card">
-        <h3>Calendrier</h3>
-        <p>Samedi matin 10h à 12h ou 11h à 13h en extérieur Paris 13 BNF ou Station F selon météo. Annonce et inscription via WhatsApp et Instagram.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="workshops" class="section">
-    <div class="wrap">
-      <h2>Workshops</h2>
-      <article id="workshops-formules" class="card">
-        <h3>Formules</h3>
-        <p>Un à deux jours pour écoles et studios. Jusqu’à six jours pour formats immersifs. Objectifs clairs progression mesurable contenus sur mesure.</p>
-        <p class="hint">Budget indicatif structure 300 à 500 € par demi journée selon contenu effectif et déplacement.</p>
-      </article>
-      <article id="workshops-marques" class="card">
-        <h3>Ils m’ont fait confiance</h3>
-        <ul class="logos">
-          <li>H&amp;M</li>
-          <li>Adidas</li>
-          <li>Jordan</li>
-          <li>McDonald’s</li>
-          <li>Galeries Lafayette</li>
-          <li>ShelterSuit</li>
-          <li>Sweet Pants</li>
-          <li>J&amp;B</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section id="artistes" class="section alt">
-    <div class="wrap">
-      <h2>Artistes</h2>
-      <div class="grid three">
-        <article id="coaching" class="card">
-          <h3>Coaching de présence</h3>
-          <p>Posture voix geste regard rythme du corps. Construire une présence nette sans surjeu et l’ancrer dans ton univers.</p>
-        </article>
-        <article id="direction" class="card">
-          <h3>Direction de mouvement</h3>
-          <p>Définir une grammaire de mouvement au service du projet. Scène clip plateau TV. Travail avec figurants et danseurs. Collaboration avec chorégraphes invités quand nécessaire.</p>
-        </article>
-        <article id="chore" class="card">
-          <h3>Chorégraphie clips et live</h3>
-          <p>Écriture casting répétitions filage. Petite ou grande équipe. De trois figurants à vingt danseurs. Livraison clés en main.</p>
-        </article>
+    <section id="lab" class="block">
+      <h2 class="h">HipHopLab  ateliers freestyle</h2>
+      <p>Samedi matin 10h-12h selon calendrier. Travail de fond sur moteurs directions niveaux musicalité intentions densité. Objectif clarifier tes choix et rendre ta danse lisible forte personnelle.</p>
+      <div class="line-cta">
+        <a class="btn sm" href="https://wa.me/33663841018?text=HipHopLab%20samedi%2010-12%20je%20r%C3%A9serve" target="_blank">Réserver samedi</a>
+        <a class="btn sm" href="#lab-themes">Voir les thèmes</a>
       </div>
-      <a class="btn" href="mailto:krees.sama@gmail.com?subject=Demande%20de%20devis">Demander un devis</a>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" class="section">
-    <div class="wrap">
-      <h2>À propos</h2>
-      <p>Basé à Bruxelles et présent à Paris je me déplace partout. Danseur chorégraphe directeur de mouvement et pédagogue ancré dans le freestyle hip hop. Mon approche vise une danse lisible efficace et honnête au service des personnes et des projets.</p>
-    </div>
-  </section>
+    <section id="cartes" class="block">
+      <h2 class="h">Cartes 5 et 10 cours</h2>
+      <p>Valables sur les cours du vendredi et sur les HipHopLab du samedi hors dates spéciales.</p>
+      <ul class="bul">
+        <li>Carte 5 cours économique et flexible</li>
+        <li>Carte 10 cours progression continue priorité d’inscription</li>
+      </ul>
+      <a class="btn sm" href="https://wa.me/33663841018?text=Info%20carte%205%20ou%2010%20cours" target="_blank">Demander infos</a>
+    </section>
 
-  <section id="contact" class="section alt">
-    <div class="wrap">
-      <h2>Contact</h2>
-      <p>WhatsApp direct <a class="link-strong" href="https://wa.me/33663841018" target="_blank">+33 6 63 84 10 18</a>  Instagram <a class="link-strong" href="https://www.instagram.com/kreesama" target="_blank">@kreesama</a></p>
-      <p>Devis et projets par mail <a class="link-strong" href="mailto:krees.sama@gmail.com">krees.sama@gmail.com</a></p>
-    </div>
-  </section>
-</main>
+    <section id="workshops-collectifs" class="block">
+      <h2 class="h">Workshops collectifs</h2>
+      <p>Journées et semaines thématiques pour écoles studios centres culturels. Formats sur mesure 300 à 500€ selon durée contenu logistique.</p>
+      <ul class="bul">
+        <li>Textures appuis transformation du corps</li>
+        <li>Improvisation structurée musicalité groove</li>
+        <li>Transitions connecteurs spatialité</li>
+        <li>Freestyle densité et présence</li>
+      </ul>
+      <a class="btn sm" href="mailto:krees.sama@gmail.com?subject=Devis%20Workshop%20collectif">Demander un devis</a>
+    </section>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <p>© <span id="y"></span> Krees Sama. Mouvement utile. Résultats visibles.</p>
-  </div>
-</footer>
+    <section id="workshops-marques" class="block">
+      <h2 class="h">Marques et événements</h2>
+      <p>Conception et direction de modules autour du mouvement pour activations campagnes teambuildings. Références  H&amp;M  Adidas  Jordan  McDonald’s  Galeries Lafayette  Sweet Pants  Shelter Suit  J&amp;B.</p>
+      <a class="btn sm" href="mailto:krees.sama@gmail.com?subject=Demande%20d%27intervention%20marque%20ou%20%C3%A9v%C3%A9nement">Parler d’un projet</a>
+    </section>
 
-<script src="script.js"></script>
+    <section id="coaching" class="block">
+      <h2 class="h">Coaching de présence pour artistes</h2>
+      <p>Accompagnement sur la posture la voix le non verbal l’usage de l’espace l’adresse au public. Objectif mieux habiter scène et caméra sans trahir l’identité de l’artiste.</p>
+    </section>
+
+    <section id="direction" class="block">
+      <h2 class="h">Direction de mouvement</h2>
+      <p>Construction d’un langage gestuel cohérent avec l’univers. Travail sur intentions chemins de corps rythmes respirations placements.</p>
+    </section>
+
+    <section id="choreo" class="block">
+      <h2 class="h">Chorégraphie clips et live</h2>
+      <p>De quelques figurants à plusieurs danseurs organisation des tableaux coaching plateau coordination répétitions casting partenaires spécialisés si besoin.</p>
+      <a class="btn sm" href="mailto:krees.sama@gmail.com?subject=Chor%C3%A9graphie%20clip%2Flive">Demander un devis</a>
+    </section>
+
+    <section id="about" class="block">
+      <h2 class="h">À propos</h2>
+      <p>Basé à Bruxelles je travaille entre Bruxelles et Paris mobile en Europe et au delà. Ancré dans le hip hop freestyle je transmets depuis 2010 en cours ateliers et workshops. Ma ligne une esthétique honnête précise lisible au service des personnes et des projets.</p>
+    </section>
+
+    <section id="contact" class="block">
+      <h2 class="h">Contact direct</h2>
+      <p>WhatsApp  +33 6 63 84 10 18</p>
+      <p>Instagram  @kreesama</p>
+      <div class="line-cta">
+        <a class="btn" href="https://wa.me/33663841018" target="_blank">WhatsApp</a>
+        <a class="btn" href="https://www.instagram.com/kreesama" target="_blank">Instagram</a>
+        <a class="btn" href="mailto:krees.sama@gmail.com">Mail devis</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ft">
+    <p>© <span id="y"></span> Krees Sama. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
