@@ -1,27 +1,14 @@
-// script.js  menu stable + utilitaires
-document.addEventListener('DOMContentLoaded', () => {
-  // année
-  const y = document.getElementById('y');
-  if (y) y.textContent = new Date().getFullYear();
+// script.js
+// année auto et amélioration UX des menus sur mobile
+document.getElementById('y').textContent = new Date().getFullYear();
 
-  // dropdowns stables avec délai
-  const DELAY = 160; // ms
-  document.querySelectorAll('.has-sub').forEach(li => {
-    let closeTimer;
-    li.addEventListener('mouseenter', () => {
-      clearTimeout(closeTimer);
-      li.classList.add('open');
-    });
-    li.addEventListener('mouseleave', () => {
-      closeTimer = setTimeout(() => li.classList.remove('open'), DELAY);
-    });
-    // garder ouvert si on survole le dropdown
-    const dd = li.querySelector('.dropdown');
-    if (dd){
-      dd.addEventListener('mouseenter', () => clearTimeout(closeTimer));
-      dd.addEventListener('mouseleave', () => {
-        closeTimer = setTimeout(() => li.classList.remove('open'), DELAY);
-      });
-    }
+// ferme un menu quand on en ouvre un autre
+document.querySelectorAll('.dd-btn').forEach(btn=>{
+  btn.addEventListener('mouseenter',()=>{
+    document.querySelectorAll('.dd-panel').forEach(p=>{ if(p!==btn.nextElementSibling) p.style.display='none'; });
+    btn.nextElementSibling.style.display='block';
   });
+});
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.dd')) document.querySelectorAll('.dd-panel').forEach(p=>p.style.display='none');
 });
