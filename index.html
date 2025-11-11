@@ -1,185 +1,121 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Krees Sama — Mouvement utile. Résultats visibles.</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0b0b0f;
-  --txt:#e9e9ef;
-  --muted:#a7a8b3;
-  --brand:#6d4cff;
-  --ring: rgba(109,76,255,.35);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(109,76,255,.18), transparent 60%),
-    radial-gradient(900px 500px at -10% 100%, rgba(109,76,255,.12), transparent 60%),
-    var(--bg);
-  color:var(--txt);
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Krees Sama — Mouvement utile. Résultats visibles.</title>
 
-/* header */
-.site-header{
-  position:sticky; top:0; z-index:50;
-  background:linear-gradient(180deg, rgba(11,11,15,.9), rgba(11,11,15,.65) 70%, transparent);
-  border-bottom:1px solid rgba(255,255,255,.05);
-  backdrop-filter: blur(8px);
-}
-.header-inner{width:min(1120px,92%); margin:0 auto; display:flex; align-items:center; gap:18px; padding:14px 0}
-.brand{font-weight:900; letter-spacing:.2px; text-decoration:none; color:var(--txt); font-size:22px; padding:6px 10px; border-radius:12px; border:1px solid rgba(255,255,255,.08)}
-.main-nav{display:flex; gap:10px; align-items:center; margin-left:auto; flex-wrap:wrap}
-.nav-btn,.nav-link{color:var(--txt); font-weight:600; font-size:14px; background:transparent; border:0; cursor:pointer; padding:10px 12px; border-radius:10px}
-.nav-link{text-decoration:none}
-.nav-btn:hover,.nav-link:hover{background:rgba(255,255,255,.06)}
-.nav-item{position:relative}
-.dropdown{
-  position:absolute; top:100%; left:0; display:none; flex-direction:column; min-width:220px;
-  background:rgba(18,18,24,.98); border:1px solid rgba(255,255,255,.08);
-  border-radius:14px; padding:8px; box-shadow:0 10px 30px rgba(0,0,0,.35)
-}
-.dropdown a{color:var(--txt); text-decoration:none; padding:10px; border-radius:10px; font-size:14px}
-.dropdown a:hover{background:rgba(255,255,255,.06)}
-.nav-item:hover .dropdown{display:flex}
-.socials{display:flex; gap:8px}
-.icon-btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:36px; height:36px; border-radius:10px; text-decoration:none; font-weight:800;
-  border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:var(--txt)
-}
-
-/* hero */
-.hero{min-height:calc(100vh - 72px); display:grid; place-items:center}
-.hero-inner{text-align:center; width:min(900px,92%); margin:0 auto; padding:56px 0 72px}
-.kicker{text-transform:uppercase; letter-spacing:.18em; color:var(--muted); font-weight:600; font-size:12px; margin-bottom:12px}
-.hero-title{font-size: clamp(40px, 6vw, 76px); line-height:1.04; letter-spacing:-.02em; margin:0 0 14px 0; font-weight:900}
-.hero-sub{margin:0 auto 22px; color:#cfd0d8; font-size: clamp(16px, 2.1vw, 18px); max-width:720px}
-.cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:10px}
-.btn{display:inline-block; text-decoration:none; padding:14px 18px; border-radius:14px; font-weight:800; letter-spacing:.02em; border:1px solid rgba(255,255,255,.14); color:var(--txt)}
-.btn.primary{background:linear-gradient(180deg, var(--brand), #4e36d6); border-color:transparent; box-shadow:0 10px 24px rgba(109,76,255,.35)}
-.btn.ghost{background:rgba(255,255,255,.06)}
-.alt-lang{margin:18px auto 4px; color:#b9b9c6; font-weight:800}
-.trust{margin:28px auto 0; padding:14px 16px; border:1px solid rgba(255,255,255,.08); border-radius:14px; background:rgba(255,255,255,.03); width:min(900px,96%)}
-.trust span{display:block; color:var(--muted); font-size:12px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:8px}
-.trust ul{margin:0; padding:0; list-style:none; display:flex; gap:12px; flex-wrap:wrap; justify-content:center}
-.trust li{padding:8px 12px; border-radius:10px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.06); font-weight:700; font-size:13px; color:#dadbef}
-
-/* footer */
-.site-footer{border-top:1px solid rgba(255,255,255,.06); margin-top:42px}
-.footer-inner{width:min(1120px,92%); margin:0 auto; display:flex; justify-content:space-between; gap:18px; padding:24px 0 36px 0}
-.foot-left a, .foot-right a{color:#d8d9e6; text-decoration:none}
-.foot-left a:hover, .foot-right a:hover{text-decoration:underline}
-.foot-left strong{display:block; margin-bottom:6px}
-
-/* small */
-@media (max-width: 720px){
-  .hero-title{font-size: clamp(36px, 9vw, 56px)}
-}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">Krees Sama</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Retour à l’accueil">Krees&nbsp;Sama</a>
 
-    <nav class="main-nav">
-      <div class="nav-item">
-        <button class="nav-btn">Hip Hop Choreo</button>
-        <div class="dropdown">
-          <a href="pages/choreo.html#cours">Cours du vendredi</a>
-          <a href="pages/choreo.html#packs">Cartes 5 et 10 cours</a>
-          <a href="pages/choreo.html#infos">Infos pratiques</a>
+      <nav class="main-nav">
+        <div class="nav-item" data-dropdown>
+          <button class="nav-btn" data-trigger aria-expanded="false">Hip Hop Choreo</button>
+          <div class="dropdown" data-panel>
+            <a href="pages/choreo.html#cours">Cours du vendredi</a>
+            <a href="pages/choreo.html#packs">Cartes 5 et 10 cours</a>
+            <a href="pages/choreo.html#infos">Infos pratiques</a>
+          </div>
         </div>
+
+        <div class="nav-item" data-dropdown>
+          <button class="nav-btn" data-trigger aria-expanded="false">HipHopLab</button>
+          <div class="dropdown" data-panel>
+            <a href="pages/hiphoplab.html#atelier">Ateliers freestyle</a>
+            <a href="pages/hiphoplab.html#themes">Thèmes et méthodes</a>
+            <a href="pages/hiphoplab.html#calendrier">Calendrier</a>
+          </div>
+        </div>
+
+        <div class="nav-item" data-dropdown>
+          <button class="nav-btn" data-trigger aria-expanded="false">Workshops</button>
+          <div class="dropdown" data-panel>
+            <a href="pages/workshops.html#collectifs">Collectifs</a>
+            <a href="pages/workshops.html#ecoles">Écoles et studios</a>
+            <a href="pages/workshops.html#marques">Marques et événements</a>
+          </div>
+        </div>
+
+        <div class="nav-item" data-dropdown>
+          <button class="nav-btn" data-trigger aria-expanded="false">Artistes</button>
+          <div class="dropdown" data-panel>
+            <a href="pages/artistes.html#coaching">Coaching de présence</a>
+            <a href="pages/artistes.html#direction">Direction de mouvement</a>
+            <a href="pages/artistes.html#choreo">Chorégraphie clips et live</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="pages/about.html">À propos</a>
+        <a class="nav-link" href="en/index.html" hreflang="en">EN</a>
+      </nav>
+
+      <div class="socials">
+        <a class="icon-btn wa" data-wa="+33663841018" href="https://wa.me/33663841018" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <a class="icon-btn ig" data-ig href="https://instagram.com/kreesama" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero">
+    <section class="hero-inner" id="hero" data-reveal>
+      <p class="kicker">Paris Bruxelles   mobile partout</p>
+
+      <h1 class="hero-title">Bouger plus clair. Danser plus vrai.</h1>
+
+      <p class="hero-sub">
+        Des formats simples qui donnent des résultats visibles.
+        Cours collectifs ateliers de recherche HipHopLab
+        workshops immersifs direction de mouvement coaching de présence.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="https://wa.me/33663841018" target="_blank" rel="noopener">Réserver un cours</a>
+        <a class="btn ghost" href="https://wa.me/33663841018?text=Hello%20Krees%2C%20je%20souhaite%20un%20appel%20d%C3%A9couverte%20de%2015%20min" target="_blank" rel="noopener">Appel découverte 15 min</a>
       </div>
 
-      <div class="nav-item">
-        <button class="nav-btn">HipHopLab</button>
-        <div class="dropdown">
-          <a href="pages/hiphoplab.html#atelier">Ateliers freestyle</a>
-          <a href="pages/hiphoplab.html#themes">Thèmes et méthodes</a>
-          <a href="pages/hiphoplab.html#calendrier">Calendrier</a>
-        </div>
+      <p class="alt-lang" lang="en">Clear moves. Dance real.</p>
+
+      <div class="trust fade" data-reveal>
+        <span>Ils m’ont fait confiance</span>
+        <ul>
+          <li>H&amp;M</li>
+          <li>Adidas</li>
+          <li>Jordan</li>
+          <li>McDonald’s</li>
+          <li>Galeries Lafayette</li>
+          <li>ShelterSuit</li>
+          <li>Sweet Pants</li>
+          <li>J&amp;B</li>
+        </ul>
       </div>
+    </section>
+  </main>
 
-      <div class="nav-item">
-        <button class="nav-btn">Workshops</button>
-        <div class="dropdown">
-          <a href="pages/workshops.html#collectifs">Collectifs</a>
-          <a href="pages/workshops.html#ecoles">Écoles et studios</a>
-          <a href="pages/workshops.html#marques">Marques et événements</a>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-inner fade" data-reveal>
+      <div class="foot-left">
+        <strong>Contact direct</strong>
+        <a href="mailto:krees.sama@gmail.com">krees.sama@gmail.com</a><br>
+        <a href="tel:+33663841018">+33 6 63 84 10 18</a>
       </div>
-
-      <div class="nav-item">
-        <button class="nav-btn">Artistes</button>
-        <div class="dropdown">
-          <a href="pages/artistes.html#coaching">Coaching de présence</a>
-          <a href="pages/artistes.html#direction">Direction de mouvement</a>
-          <a href="pages/artistes.html#chore">Chorégraphie clips et live</a>
-        </div>
+      <div class="foot-right">
+        <a href="pages/mentions.html">Mentions légales</a>
       </div>
-
-      <a class="nav-link" href="pages/about.html">À propos</a>
-    </nav>
-
-    <div class="socials">
-      <a class="icon-btn" href="https://wa.me/33663841018" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
-      <a class="icon-btn" href="https://instagram.com/kreesama" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
     </div>
-  </div>
-</header>
+  </footer>
 
-<main class="hero">
-  <div class="hero-inner">
-    <p class="kicker">Paris Bruxelles   mobile partout</p>
-    <h1 class="hero-title">Bouger plus clair. Danser plus vrai.</h1>
-    <p class="hero-sub">
-      Des formats simples qui donnent des résultats visibles. Cours collectifs ateliers de recherche
-      workshops immersifs direction de mouvement pour artistes coaching de présence.
-    </p>
+  <button id="toTop" aria-label="Retour en haut">↑</button>
 
-    <div class="cta-row">
-      <a class="btn primary" href="https://wa.me/33663841018" target="_blank" rel="noopener">Réserver un cours</a>
-      <a class="btn ghost" href="https://wa.me/33663841018?text=Hello%20Krees%2C%20je%20souhaite%20un%20appel%20d%C3%A9couverte%20de%2015%20min" target="_blank" rel="noopener">Appel découverte 15 min</a>
-    </div>
-
-    <p class="alt-lang" lang="en">Clear moves. Dance real.</p>
-
-    <div class="trust">
-      <span>Ils m’ont fait confiance</span>
-      <ul>
-        <li>H&amp;M</li>
-        <li>Adidas</li>
-        <li>Jordan</li>
-        <li>McDonald’s</li>
-        <li>Galeries Lafayette</li>
-        <li>ShelterSuit</li>
-        <li>Sweet Pants</li>
-        <li>J&amp;B</li>
-      </ul>
-    </div>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="foot-left">
-      <strong>Contact direct</strong>
-      <a href="mailto:krees.sama@gmail.com">krees.sama@gmail.com</a><br>
-      <a href="tel:+33663841018">+33 6 63 84 10 18</a>
-    </div>
-    <div class="foot-right">
-      <a href="pages/mentions.html">Mentions légales</a>
-    </div>
-  </div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
