@@ -1,301 +1,196 @@
-/* Basic reset and fonts */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* General Styles */
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
+  margin: 0;
+  background-color: #000;            /* Dark elegant background */
+  color: #eee;                       /* Light text for contrast */
+  font-family: 'Nunito', sans-serif; /* Modern, readable font */
+}
+h1, h2, p {
+  margin: 0 20px 20px 20px;
+}
+h1.slogan {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30vh;    /* center roughly in viewport */
+  font-size: 3em;
+  line-height: 1.2;
+}
+h2 {
+  font-weight: 600;
+  font-size: 2em;
+  margin-top: 40px;
+  text-align: center;
+}
+.section-text {
+  font-size: 1em;
   line-height: 1.6;
-  background: #fff;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: inherit;
+  max-width: 800px;
+  margin: 10px auto 30px auto;
+  text-align: center;
 }
 
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-header.hidden {
-  transform: translateY(-100%);
-}
-/* Top bar (social + flags + burger) */
-.top-bar {
+/* Navigation Styles */
+.top-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5em 1em;
-}
-.social-icons a {
-  margin-right: 1em;
-  font-size: 1.2em;
-  color: #333;
-}
-.social-icons a:last-child {
-  margin-right: 0;
-}
-.lang-switch a {
-  margin-left: 0.5em;
-  font-size: 1.1em;
-}
-.lang-switch a:first-child {
-  margin-left: 0;
-}
-/* Hide mobile logo by default (visible on mobile via media query) */
-.mobile-logo {
-  display: none;
-  font-weight: 700;
-}
-/* Burger button (hidden on desktop) */
-.burger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  color: #333;
-  margin-left: 1em;
-}
-.burger:focus {
-  outline: none;
-}
-/* Main nav (desktop) */
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5em 1em;
-  border-top: 1px solid #eee;
-}
-.logo {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 0.5em;
-  text-align: center;
+  justify-content: flex-end;
+  background: #000;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 100;
 }
 .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
+  align-items: center;
 }
 .menu li {
-  position: relative;
-}
-.menu > li + li {
-  margin-left: 2em;
+  margin: 0 15px;
 }
 .menu a {
-  font-weight: 500;
-  font-size: 0.95em;
-  padding: 0.25em;
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  transition: color 0.3s;
 }
 .menu a:hover {
-  color: #009688;
-}
-/* Dropdown submenu (desktop) */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 0.5em 0;
-  min-width: 180px;
-  z-index: 1000;
-  text-align: left;
-}
-.submenu li {
-  padding: 0;
-}
-.submenu a {
-  display: block;
-  padding: 0.5em 1em;
-  font-size: 0.9em;
-  white-space: nowrap;
-}
-.submenu a:hover {
-  background: #f0f0f0;
-  color: #009688;
-}
-/* Show submenu on hover (desktop) */
-.has-sub:hover .submenu {
-  display: block;
-}
-
-/* Hero section */
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2em 1em;
-  /* Ensure hero takes most of viewport height for a dramatic intro */
-  min-height: 90vh;
-}
-.tagline {
-  font-family: 'CustomFont', cursive;
-  color: #009688;
-  font-size: clamp(1.5rem, 8vw, 4rem);
-  font-weight: 500;
-  margin: 0.5em;
-}
-.scroll-down {
-  margin-top: 2em;
-  font-size: 1.5em;
-  color: #009688;
-  animation: bounce 2s infinite;
-}
-.scroll-down:hover {
-  color: #007f70;
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(5px); }
-  60% { transform: translateY(3px); }
-}
-
-/* Section styles */
-.section {
-  padding: 4em 1em;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.section h2 {
-  font-size: 1.8em;
-  margin-bottom: 0.5em;
-  text-align: center;
-}
-.section h3 {
-  font-size: 1.3em;
-  margin: 2em 0 0.5em;
-  color: #111;
-}
-.section p {
-  margin-bottom: 1em;
-  text-align: justify;
-}
-.section p strong {
-  font-weight: 700;
-}
-/* Lists inside sections */
-.pricing li,
-.schedule li {
-  margin-bottom: 0.5em;
-}
-/* Buttons */
-.btn {
-  display: inline-block;
-  background: #009688;
   color: #fff;
-  padding: 0.6em 1.2em;
-  font-weight: 600;
-  border: none;
-  border-radius: 3px;
+}
+.lang-toggle {
+  margin-left: 10px;
+}
+.lang-option {
   cursor: pointer;
-  text-align: center;
-  margin-top: 1em;
-  text-decoration: none;
-}
-.btn:hover {
-  background: #007f70;
+  font-size: 1.1em;
+  margin-left: 8px;
 }
 
-/* Footer */
-footer {
-  background: #111;
-  color: #ccc;
-  text-align: center;
-  padding: 2em 1em;
-  margin-top: 2em;
-}
-.footer-social {
-  margin-bottom: 1em;
-}
-.footer-social a {
-  font-size: 1.4em;
-  color: #ccc;
-  margin: 0 0.5em;
-}
-.footer-social a:hover {
+/* Highlight current active nav link (optional) */
+.menu a.active {
   color: #fff;
-}
-.footer-note {
-  font-size: 0.9em;
+  text-decoration: underline;
 }
 
-/* Responsive: Mobile Styles */
-@media (max-width: 768px) {
-  /* Show mobile logo, hide desktop logo */
-  .mobile-logo {
-    display: block;
-    font-size: 1.2em;
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  max-width: 90%;
+  margin: 20px auto 40px auto;
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* hide scrollbar IE/Edge */
+  scrollbar-width: none;     /* hide scrollbar Firefox */
+}
+.carousel-track::-webkit-scrollbar { display: none; }  /* hide scrollbar Chrome/Safari */
+.card {
+  background: #111;
+  border-radius: 8px;
+  margin: 0 10px;
+  flex: 0 0 250px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+.card-img {
+  width: 100%;
+  height: 150px;
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+}
+.card-img.placeholder {
+  /* Placeholder image style (could be replaced with actual images in CSS or inline) */
+  background-image: none;
+}
+.card-info {
+  padding: 10px;
+  font-size: 0.9em;
+  text-align: center;
+}
+.card-info span {
+  display: none;
+}
+.card-info .lang-fr { display: inline; } /* default to French text */
+.scroll-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+}
+.scroll-area.left { left: 0; }
+.scroll-area.right { right: 0; }
+
+/* Footer Styles */
+.footer {
+  background: #111;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer .social-icon {
+  width: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.footer a { text-decoration: none; }
+
+/* Language switching (show/hide text) */
+body.fr-active .lang-fr { display: inline; }
+body.fr-active .lang-en { display: none; }
+body.en-active .lang-fr { display: none; }
+body.en-active .lang-en { display: inline; }
+
+/* Responsive Design */
+@media(max-width: 768px) {
+  h1.slogan {
+    font-size: 2em;
+    margin-top: 25vh;
   }
-  .desktop-logo {
-    display: none;
-  }
-  /* Show burger, adjust top-bar layout */
-  .burger {
-    display: block;
-  }
-  .top-bar {
-    padding: 0.5em 0.5em;
-  }
-  /* Navigation menu hidden by default on mobile */
+  h2 { font-size: 1.5em; }
+  .section-text { font-size: 0.95em; padding: 0 10px; }
+  /* Hide menu by default, show hamburger */
   .menu {
-    display: none;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: #fff;
-    border-top: 1px solid #eee;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  .menu.open {
-    display: flex;
+    align-items: flex-start;
+    background: #000;
+    border-top: 1px solid #222;
+    position: absolute;
+    top: 50px; right: 20px;
+    width: 60%;          /* menu panel width on mobile */
+    display: none;
   }
   .menu li {
-    margin: 0.5em 0;
+    margin: 15px;
   }
-  .menu > li + li {
-    margin-left: 0;
+  .nav-toggle { display: none; }
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-left: auto;
+    color: #eee;
+    user-select: none;
   }
-  .menu a {
-    font-size: 1em;
-  }
-  /* Always show submenu items in mobile menu (no hover) */
-  .has-sub .submenu {
-    position: static;
-    display: block;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    min-width: 0;
-    background: #fff;
-  }
-  .has-sub .submenu a {
-    padding-left: 1.5em;
-    font-size: 0.95em;
-  }
-  .has-sub .submenu a:hover {
-    background: #eee;
+  #nav-toggle:checked ~ .menu {
+    display: flex;
   }
 }
 
-/* Custom font face for tagline (user-provided premium font) */
-@font-face {
-  font-family: 'CustomFont';
-  src: url('KreesFont.woff2') format('woff2');
-  /* The actual font file should be placed in the project */
+/* Ensure language flags are visible on mobile nav */
+@media(max-width: 768px) {
+  .lang-toggle {
+    position: absolute;
+    top: 10px;
+    right: 60px; /* leave space for hamburger on far right */
+  }
 }
