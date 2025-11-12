@@ -1,4 +1,4 @@
-// Header hide on scroll down show on scroll up
+// Header hide on scroll down, show on scroll up
 let lastY = window.scrollY;
 const header = document.getElementById('siteHeader');
 window.addEventListener('scroll', () => {
@@ -8,18 +8,29 @@ window.addEventListener('scroll', () => {
   lastY = y;
 });
 
-// Keep mega menu open while moving into it
+// Accessible dropdowns that remain open while hovering or focusing
 document.querySelectorAll('.has-sub').forEach(li=>{
   const btn = li.querySelector('.menu-btn');
-  const panel = li.querySelector('.mega');
-
-  let over = false;
-  const open = () => { panel.style.display='grid'; btn.setAttribute('aria-expanded','true'); };
+  const panel = li.querySelector('.submenu');
+  const open = () => { panel.style.display='block'; btn.setAttribute('aria-expanded','true'); };
   const close = () => { panel.style.display='none'; btn.setAttribute('aria-expanded','false'); };
 
   btn.addEventListener('mouseenter', open);
-  li.addEventListener('mouseleave', ()=>{ if(!over) close(); });
+  btn.addEventListener('focus', open);
+  li.addEventListener('mouseleave', close);
+  panel.addEventListener('mouseenter', open);
+  panel.addEventListener('mouseleave', close);
+});
 
-  panel.addEventListener('mouseenter', ()=>{ over = true; open(); });
-  panel.addEventListener('mouseleave', ()=>{ over = false; close(); });
+// Smooth scroll with header offset
+const offset = 76;
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(!el) return;
+    e.preventDefault();
+    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({top:y, behavior:'smooth'});
+  });
 });
