@@ -1,130 +1,165 @@
+<!-- en/index.html  (EN)  -> crée le dossier 'en' et mets ce fichier dedans -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Krees Sama – Professional hip-hop dancer, choreographer and coach based in Paris and Brussels. Weekly classes, workshops, labs, and artistic coaching.">
-  <title>Krees Sama | Dancer & Artistic Coach</title>
-  <!-- Font: Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <!-- FontAwesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Krees Sama • Clear moves. Dance real.</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-
-<header>
-  <div class="top-bar">
-    <!-- Social icons (left) -->
-    <div class="social-icons">
-      <a href="https://instagram.com/kreesama" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<header id="siteHeader" class="header">
+  <div class="container nav">
+    <a href="../index.html" class="brand">Krees&nbsp;Sama</a>
+    <nav class="mainnav" aria-label="Main navigation">
+      <ul>
+        <li class="has-dd"><a href="#choreo">HipHop Choreo</a>
+          <div class="dropdown">
+            <a href="#friday">Friday class</a>
+            <a href="#passes">5 and 10-class passes</a>
+            <a href="#choreo-info">Practical info</a>
+            <a href="#spirit">Class ethos</a>
+          </div>
+        </li>
+        <li class="has-dd"><a href="#lab">HipHopLab</a>
+          <div class="dropdown">
+            <a href="#approach">Approach</a>
+            <a href="#themes">Themes & methods</a>
+            <a href="#dates">Schedule</a>
+            <a href="#book-lab">Book HipHopLab</a>
+          </div>
+        </li>
+        <li class="has-dd"><a href="#workshops">Workshops</a>
+          <div class="dropdown">
+            <a href="#schools">Schools & studios</a>
+            <a href="#brands">Brands & events</a>
+            <a href="#ranges">Rates & options</a>
+          </div>
+        </li>
+        <li class="has-dd"><a href="#artists">Artist support</a>
+          <div class="dropdown">
+            <a href="#presence">Presence coaching</a>
+            <a href="#movement">Movement direction</a>
+            <a href="#choreo-live">Choreo • clips • live</a>
+          </div>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <a class="icon" href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163A11.867 11.867 0 0112.02 0C18.627 0 24 5.373 24 11.98c0 6.627-5.373 12-11.98 12a11.97 11.97 0 01-6.12-1.688L.057 24zM8.74 7.65c-.133-.296-.274-.302-.402-.308-.104-.004-.223-.004-.342-.004a.656.656 0 00-.472.221c-.163.18-.622.609-.622 1.486s.637 1.725.726 1.844c.089.119 1.229 1.974 3.005 2.686 1.485.587 1.786.47 2.108.441.322-.03 1.037-.424 1.183-.834.146-.41.146-.762.103-.834-.043-.071-.163-.115-.342-.202-.179-.089-1.058-.522-1.223-.582-.163-.06-.282-.089-.402.089-.119.178-.462.582-.566.701-.104.119-.208.134-.387.045-.179-.089-.754-.278-1.437-.887-.531-.474-.89-1.06-.994-1.239-.104-.178-.011-.275.078-.364.08-.079.179-.208.268-.312.089-.104.119-.178.179-.297.059-.118.03-.223-.015-.311-.046-.089-.402-1.006-.55-1.373z" fill="currentColor"/></svg>
+      </a>
+      <a class="icon" href="https://instagram.com/kreesama" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm6-1.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 10a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" fill="currentColor"/></svg>
+      </a>
+      <span class="pill inactive">EN</span>
+      <a class="pill" href="../index.html" hreflang="fr">FR</a>
     </div>
-    <!-- Mobile logo (center) -->
-    <div class="mobile-logo">Krees Sama</div>
-    <!-- Language switch and burger (right) -->
-    <div class="lang-switch">
-      <a href="index.html" aria-label="Français">🇫🇷</a>
-      <a href="index-en.html" aria-label="English">🇬🇧</a>
-    </div>
-    <button class="burger" aria-label="Menu"><i id="burger-icon" class="fas fa-bars"></i></button>
   </div>
-  <nav class="main-nav">
-    <a href="#hero" class="logo desktop-logo">Krees Sama</a>
-    <ul class="menu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#choreo">Hip-Hop Choreo</a></li>
-      <li><a href="#lab">Hip-Hop Lab</a></li>
-      <li class="has-sub"><a href="#workshops">Workshops</a>
-        <ul class="submenu">
-          <li><a href="#freestyle-workshop">Freestyle Workshop</a></li>
-          <li><a href="#method-workshop">Methodology Workshop</a></li>
-        </ul>
-      </li>
-      <li class="has-sub"><a href="#coaching">Coaching</a>
-        <ul class="submenu">
-          <li><a href="#personal-coaching">Personal Coaching</a></li>
-          <li><a href="#artistic-direction">Artistic Direction</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
 </header>
 
-<!-- Hero Section -->
-<section id="hero" class="hero">
-  <h1 class="tagline">Move clearer in your truest form</h1>
-  <a href="#about" class="scroll-down" aria-label="Scroll to content"><i class="fas fa-chevron-down"></i></a>
-</section>
+<main>
+  <section class="hero">
+    <div class="container hero-wrap">
+      <p class="kicker">PARIS · BRUSSELS · EUROPE · WORLD</p>
+      <h1 class="hero-title">Clear moves. Dance real.</h1>
+      <p class="lead">
+        Simple formats with visible results. Friday group classes and selective Saturday Labs. Immersive workshops for schools, studios and brands. Movement direction for artists and presence coaching for stage and camera. Announcements on Instagram.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="#choreo">Book a class</a>
+        <a class="btn ghost" href="https://wa.me/33663841018" target="_blank">15-min intro call</a>
+      </div>
+    </div>
+  </section>
 
-<!-- About Section -->
-<section id="about" class="section about">
-  <h2>About Krees Sama</h2>
-  <p>Christophe “Krees Sama” Jallerat is a professional hip-hop dancer, choreographer and movement coach based between Paris and Brussels. Born in Djibouti in 1986 to a French father and Ethiopian mother, he discovered hip-hop dance at 15 while living in Martinique, with a focus on popping. Over the years his style evolved, and about five years later he specialized in freestyle hip-hop:contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}. Drawn to improvisation, he took part in numerous dance battles and joined renowned crews (FORZESOUND, SECTION C). He eventually created his own group, Division For One, and danced with the ELAM company (Léa Djyl), solidifying his roots in hip-hop culture.</p>
-  <p>Krees has been teaching regularly since 2010:contentReference[oaicite:6]{index=6}, sharing his passion through weekly classes. With over a decade of experience, he began developing his own training methodology in 2020 to support dancers of all levels. His teaching approach is both humane and rigorous: he fosters a supportive environment that encourages learning through trial and error, while maintaining high standards to drive progress.</p>
-  <p>Throughout his career, Krees has worked with many brands and artists. <strong>Clients (dance/choreography)</strong>: H&M, Adidas, McDonald’s, Jordan, etc. <strong>Artistic direction collaborations</strong>: Sweet Pants, among other creative projects (with no overlap between lists).</p>
-</section>
+  <!-- Mirror sections (shortened text kept equivalent to FR) -->
+  <section id="choreo" class="section container">
+    <h2>HipHop Choreo — <span class="nowrap">Friday 8:30–10:00 pm</span></h2>
+    <p class="sub">Centre de Danse du Marais, Mozart room, Paris. Two-to-three-session choreo with musicality, clarity and intention at the center. Open level.</p>
+    <div class="grid-3">
+      <article id="passes" class="card"><h3>5 & 10-class passes</h3><p>5 classes €80 valid 6 weeks. 10 classes €150 valid 3 months. Valid on Fridays and selected Saturday Labs.</p></article>
+      <article id="choreo-info" class="card"><h3>Practical info</h3><p>Comfortable outfit, sneakers, water. Cash payment. Cancel ≥48 h before.</p></article>
+      <article id="spirit" class="card"><h3>Class ethos</h3><p>High standards with care, non-judgement and right to fail. We progress together.</p></article>
+    </div>
+  </section>
 
-<!-- Classes Section: Hip-Hop Choreo -->
-<section id="choreo" class="section choreo">
-  <h2>Hip-Hop Choreo – Weekly Classes</h2>
-  <p>Every week, Krees teaches Hip-Hop New Style through high-energy choreography classes. Focused on foundations, groove, technique, energy, and precision, his classes provide a comprehensive training for dancers:contentReference[oaicite:7]{index=7}. Whether you’re a beginner or advanced, you can progress at your own pace in a positive, motivating atmosphere that values each dancer’s creativity and growth.</p>
-  <p>Class schedule: Fridays 8:30pm–10:00pm, and select Saturdays 10:00am–12:00pm (in Paris).<br>
-  Available passes:</p>
-  <ul class="pricing">
-    <li>5-class card: €80 (valid for 6 weeks)</li>
-    <li>10-class card: €150 (valid for 3 months)</li>
-  </ul>
-  <p>Class cards can be used for the Friday evening classes and the scheduled Saturday sessions. This flexible system allows you to commit to multiple weeks of training, helping you build consistency and see real progress in your dance skills.</p>
-  <a href="https://wa.me/33663841018" target="_blank" class="btn">Book a class</a>
-</section>
+  <section id="lab" class="section container">
+    <h2>HipHopLab — <span class="nowrap">Saturday 10:00–12:00</span> on selected dates</h2>
+    <p class="sub">BNF (Bibliothèque nationale de France) or indoor depending on weather. Explore in guided autonomy to grow improvisation from the self.</p>
+    <div class="grid-3">
+      <article id="approach" class="card"><h3>Approach</h3><p>Clarify foundations, listening and inner structure: directions, transitions, support, presence.</p></article>
+      <article id="dates" class="card"><h3>Schedule</h3><p>Dates and openings announced on Instagram. Small groups.</p></article>
+      <article id="book-lab" class="card"><h3>Book HipHopLab</h3><p>WhatsApp me to reserve and get the theme of the day.</p></article>
+    </div>
 
-<!-- Lab Section: Hip-Hop Lab -->
-<section id="lab" class="section lab">
-  <h2>Hip-Hop Lab</h2>
-  <p>The Hip-Hop Labs are monthly sessions led by Krees at the French National Library (BNF) in Paris. They serve as a creative laboratory where dancers can deeply explore freestyle movement under Krees’s guidance. Each Lab centers on a specific theme designed to develop autonomy, improvisation skills, and self-expression in dance. It’s a safe experimental space for pushing artistic boundaries and learning new approaches alongside Krees and fellow dancers.</p>
-  <p><strong>Upcoming Hip-Hop Lab sessions:</strong></p>
-  <ul class="schedule">
-    <li>Saturday, December 6, 2025 (2pm–5pm) – Theme: Musicality & Groove</li>
-    <li>Saturday, January 10, 2026 (2pm–5pm) – Theme: Expression & Emotions</li>
-    <li>Saturday, February 7, 2026 (2pm–5pm) – Theme: Creativity & Autonomy</li>
-  </ul>
-  <p>Labs take place outdoors on the BNF esplanade and are open to dancers eager to enrich their personal style. Each session has limited spots to ensure quality guidance and interaction.</p>
-  <a href="https://wa.me/33663841018" target="_blank" class="btn">Sign up for the next Lab</a>
-</section>
+    <details id="themes" class="accordion">
+      <summary>Themes & methods — click to expand</summary>
+      <div class="grid-2 tight">
+        <article class="pillcard"><h4>Musical reading & inner groove</h4><p>Identify kick/snare/bass, play with textures and density, tell clearly.</p></article>
+        <article class="pillcard"><h4>Transitions & connectors</h4><p>Link without rupture. Level, rotation, direction, support.</p></article>
+        <article class="pillcard"><h4>Textures, supports, transformation</h4><p>One phrase in soft/dry/sticky/elastic qualities.</p></article>
+        <article class="pillcard"><h4>Directions & levels</h4><p>360°, diagonals, height play, half-levels to floor.</p></article>
+        <article class="pillcard"><h4>Axis & isolations</h4><p>Column work, spirals, organized and available body.</p></article>
+        <article class="pillcard"><h4>Timing & dynamics</h4><p>Tempo changes, flow, syncopation and counter-time.</p></article>
+        <article class="pillcard"><h4>Solo freestyle & readability</h4><p>Simple intent, clear universe, short storytelling.</p></article>
+        <article class="pillcard"><h4>Duos/trios & collective awareness</h4><p>Listening, relays, mirror and light contact.</p></article>
+      </div>
+    </details>
+  </section>
 
-<!-- Workshops Section -->
-<section id="workshops" class="section workshops">
-  <h2>Workshops</h2>
-  <p>Krees regularly offers intensive workshops in France and abroad to share his passion and expertise with dancers looking to level up their skills. As a guest instructor at various dance camps and schools, he provides participants the opportunity to train in focused, immersive sessions. These premium workshops are a chance to learn from a top choreographer in an environment of collective motivation and artistic exploration.</p>
-  <h3 id="freestyle-workshop">Freestyle Workshop</h3>
-  <p>An intensive workshop dedicated to freestyle and improvisation. In this session, Krees emphasizes on-the-spot creativity: techniques to approach battles, musicality exercises, and developing your personal style in cyphers. It’s ideal for gaining confidence in improvisation and boosting your battle skills, all with tips from an experienced competitor.</p>
-  <h3 id="method-workshop">Methodology Workshop</h3>
-  <p>A workshop focused on Krees’s training methodology. Through innovative and progressive exercises, he shares his approach to improving technique, musicality, and creativity. Participants discover new tools to refine their dance and deepen their understanding of movement. This workshop is perfect for dancers who want a structured training experience and to reach the next level in their practice.</p>
-  <p>Throughout the year, other themed workshops are organized (choreography, dancer personal development, etc.), including events in Brussels to engage with the Belgian dance community. Upcoming workshop dates are announced on Instagram and via newsletter.</p>
-  <a href="https://wa.me/33663841018" target="_blank" class="btn">Organize a workshop with Krees</a>
-</section>
+  <section id="workshops" class="section container">
+    <h2>Workshops</h2>
+    <div class="grid-2">
+      <article id="schools" class="card"><h3>Schools & studios</h3><p>1.5–3h modules or intensive cycles. Themes tailored to your dancers. Recaps available.</p></article>
+      <article id="brands" class="card"><h3>Brands & events</h3><p>Dance activation and movement direction for image or live. References: H&amp;M, Adidas, Jordan, McDonald’s, Galeries Lafayette, Sweet Pants, ShelterSuit, J&amp;B.</p></article>
+    </div>
+    <article id="ranges" class="card wide"><h3>Rates & options</h3><p>Collective workshop €300–€500 depending on duration, content and travel outside Paris/Brussels.</p></article>
+  </section>
 
-<!-- Coaching Section -->
-<section id="coaching" class="section coaching">
-  <h2>Artistic Coaching</h2>
-  <p>As an artistic coach, Krees guides dancers and artists in achieving their goals. His tailor-made coaching adapts to each individual’s needs, whether it’s improving dance skills or bringing a stage project to life. With a keen eye and a supportive approach, Krees helps unlock the full artistic potential of every person he works with.</p>
-  <h3 id="personal-coaching">Personal Coaching</h3>
-  <p>One-on-one, personalized training for dancers who want to accelerate their progress. From technique and musicality to stage presence, Krees develops a custom program to address key areas and develop your unique style. Whether you’re preparing for an audition, a competition, or simply aiming to gain confidence, you’ll benefit from dedicated coaching that pushes you toward excellence.</p>
-  <h3 id="artistic-direction">Artistic Direction</h3>
-  <p>Krees also serves as a movement director and artistic consultant on various professional projects: music videos, stage shows, commercials, and events. Backed by his collaborations with major brands, he brings a creative vision to craft impactful choreography that aligns with the project’s identity. From initial concept to final performance, his expertise ensures solid artistic direction every step of the way.</p>
-  <a href="https://wa.me/33663841018" target="_blank" class="btn">Contact Krees for coaching</a>
-</section>
+  <section id="artists" class="section container">
+    <h2>Artist support</h2>
+    <div class="grid-2">
+      <article id="presence" class="card"><h3>Presence coaching</h3><p>Stage posture, nerves, intention and breath. Honest gesture serving text and music.</p></article>
+      <article id="movement" class="card"><h3>Movement direction</h3><p>From rehearsal to stage. Vocabulary, placements, dynamics. Dancers, extras and camera.</p></article>
+    </div>
+    <article id="choreo-live" class="card wide"><h3>Choreo • clips • live</h3><p>Dedicated creation with or without dancers. Guest specialist possible. Deliverables fit clip or tour constraints.</p></article>
+  </section>
 
-<footer>
-  <div class="footer-social">
-    <a href="https://instagram.com/kreesama" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <section id="about" class="section container">
+    <h2>About</h2>
+    <div class="grid-2">
+      <article class="card"><p>Dancer, choreographer and movement director. Rooted in hip-hop freestyle, I teach with music, clarity and honesty at the center. Based between Brussels and Paris, traveling across Europe and beyond.</p></article>
+      <article class="card"><h3>Trusted by</h3><ul class="cols">
+        <li>H&amp;M</li><li>Adidas</li><li>Jordan</li><li>McDonald’s</li>
+        <li>Galeries Lafayette</li><li>Sweet Pants</li><li>ShelterSuit</li><li>J&amp;B</li>
+      </ul></article>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Direct contact</h3>
+      <p class="muted">WhatsApp & Instagram for classes. Email for quotes and projects.</p>
+      <div class="social-row">
+        <a class="icon big" href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163A11.867 11.867 0 0112.02 0C18.627 0 24 5.373 24 11.98c0 6.627-5.373 12-11.98 12a11.97 11.97 0 01-6.12-1.688L.057 24z" fill="currentColor"/></svg>
+        </a>
+        <a class="icon big" href="https://instagram.com/kreesama" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" fill="currentColor"/></svg>
+        </a>
+      </div>
+      <p class="muted email"><a href="mailto:krees.sama@gmail.com">krees.sama@gmail.com</a> · <a href="tel:+33663841018">+33&nbsp;6&nbsp;63&nbsp;84&nbsp;10&nbsp;18</a></p>
+    </div>
+    <p class="legal">© Krees Sama. All rights reserved.</p>
   </div>
-  <div class="footer-note">© 2025 Krees Sama. All rights reserved.</div>
 </footer>
-
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
