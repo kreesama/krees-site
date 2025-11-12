@@ -1,56 +1,68 @@
-// Toggle header visibility on scroll (hide on scroll down, show on scroll up)
-let lastScrollY = 0;
-const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-  const currentY = window.pageYOffset || document.documentElement.scrollTop;
-  if (currentY <= 0) {
-    // At top: always show header
-    header.classList.remove('hidden');
-  }
-  if (currentY > lastScrollY + 50) {
-    // Scrolling down beyond 50px
-    header.classList.add('hidden');
-    lastScrollY = currentY;
-  } else if (lastScrollY > currentY + 50) {
-    // Scrolling up beyond 50px
-    header.classList.remove('hidden');
-    lastScrollY = currentY;
-  }
-});
+// Navigation: single-page section switching
+const navLinks = document.querySelectorAll('.menu a');
+const sections = document.querySelectorAll('.page-section');
+let currentSection = 'home';
 
-// Mobile menu toggle
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
-burger.addEventListener('click', () => {
-  if (menu.classList.contains('open')) {
-    menu.classList.remove('open');
-    // Change icon to bars
-    document.getElementById('burger-icon').classList.remove('fa-times');
-    document.getElementById('burger-icon').classList.add('fa-bars');
-  } else {
-    menu.classList.add('open');
-    // Change icon to close (times)
-    document.getElementById('burger-icon').classList.remove('fa-bars');
-    document.getElementById('burger-icon').classList.add('fa-times');
-  }
-});
+// Function to show a section by id and hide others
+function showSection(sectionId) {
+  sections.forEach(sec => {
+    sec.style.display = (sec.id === sectionId) ? 'block' : 'none';
+  });
+  currentSection = sectionId;
+}
 
-// Smooth scroll for internal anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const targetId = this.getAttribute('href');
-    if (targetId.length > 1) {
-      // Only handle if target is an id on page (length > 1 means not just "#")
-      const targetElem = document.querySelector(targetId);
-      if (targetElem) {
-        e.preventDefault();
-        // Close mobile menu if open
-        menu.classList.remove('open');
-        document.getElementById('burger-icon').classList.remove('fa-times');
-        document.getElementById('burger-icon').classList.add('fa-bars');
-        // Smooth scroll to section
-        targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+// Initialize: hide all sections except home
+showSection('home');
+
+// Handle nav link clicks
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = link.getAttribute('data-section');
+    if (target) {
+      // Show target section
+      showSection(target);
+      // Update active link style
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      // If mobile menu was open, close it
+      document.getElementById('nav-toggle').checked = false;
     }
   });
+});
+
+// Carousel auto-scroll on hover
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const leftArea = carousel.querySelector('.scroll-area.left');
+  const rightArea = carousel.querySelector('.scroll-area.right');
+  let scrollLeftInterval, scrollRightInterval;
+  leftArea.addEventListener('mouseenter', () => {
+    scrollLeftInterval = setInterval(() => {
+      track.scrollBy({ left: -5, behavior: 'auto' });
+    }, 20);
+  });
+  leftArea.addEventListener('mouseleave', () => {
+    clearInterval(scrollLeftInterval);
+  });
+  rightArea.addEventListener('mouseenter', () => {
+    scrollRightInterval = setInterval(() => {
+      track.scrollBy({ left: 5, behavior: 'auto' });
+    }, 20);
+  });
+  rightArea.addEventListener('mouseleave', () => {
+    clearInterval(scrollRightInterval);
+  });
+});
+
+// Language toggle
+const frBtn = document.getElementById('fr-btn');
+const enBtn = document.getElementById('en-btn');
+frBtn.addEventListener('click', () => {
+  document.body.classList.add('fr-active');
+  document.body.classList.remove('en-active');
+});
+enBtn.addEventListener('click', () => {
+  document.body.classList.add('en-active');
+  document.body.classList.remove('fr-active');
 });
