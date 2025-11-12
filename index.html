@@ -5,93 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Krees Sama — Mouvement utile. Résultats visibles.</title>
 
-  <!-- Fonts -->
+  <!-- Fonts: corps Manrope, héros Plus Jakarta Sans pour un rendu premium compact -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Body font -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <!-- Hero font for the slogan look -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
 <header id="siteHeader" class="header">
   <div class="nav-inner">
-    <a class="brand" href="index.html" aria-label="Accueil Krees Sama">Krees Sama</a>
+    <a class="brand" href="index.html" aria-label="Accueil">Krees Sama</a>
 
     <nav class="main-nav" aria-label="Navigation principale">
       <ul class="menu">
         <li class="menu-item has-sub">
           <button class="menu-btn" aria-haspopup="true" aria-expanded="false">HipHop Choreo</button>
-          <div class="mega">
-            <a href="#choreo" class="mega-item">
-              <h4>Cours du vendredi</h4>
-              <p>20h30 22h00 Centre de Danse du Marais salle Mozart 41 rue du Temple Paris. Choré sur deux à trois séances pour progresser sans pression. Cartes 5 et 10 valables ici.</p>
-            </a>
-            <a href="#passes" class="mega-item">
-              <h4>Cartes 5 et 10 cours</h4>
-              <p>80€ valable 6 semaines. 150€ valable 3 mois. Utilisables le vendredi et sur certains samedis HipHopLab.</p>
-            </a>
-            <a href="#infos" class="mega-item">
-              <h4>Infos pratiques</h4>
-              <p>Tenue confortable baskets bouteille d’eau. Règlement en espèces. Annulation 48h sinon séance due.</p>
-            </a>
-          </div>
+          <ul class="submenu">
+            <li><a href="#choreo">Cours du vendredi</a></li>
+            <li><a href="#passes">Cartes 5 et 10 cours</a></li>
+            <li><a href="#infos">Infos pratiques</a></li>
+            <li><a href="#esprit">Esprit du cours</a></li>
+          </ul>
         </li>
 
         <li class="menu-item has-sub">
           <button class="menu-btn" aria-haspopup="true" aria-expanded="false">HipHopLab</button>
-          <div class="mega">
-            <a href="#lab" class="mega-item">
-              <h4>Ateliers freestyle</h4>
-              <p>Certains samedis 10h 12h à Paris 13 BNF Bibliothèque François Mitterrand ou Station F selon météo. Thèmes annoncés sur Instagram.</p>
-            </a>
-            <a href="#themes" class="mega-item">
-              <h4>Thèmes et méthodes</h4>
-              <p>Exemples Textures et appuis Lecture musicale et groove Transitions et connecteurs Niveaux et directions Flow continu et contrastes Bras mains posture.</p>
-            </a>
-            <a href="#calendar" class="mega-item">
-              <h4>Calendrier</h4>
-              <p>Annonce des dates et lieux en story. Réservation par WhatsApp ou Instagram DM.</p>
-            </a>
-          </div>
+          <ul class="submenu">
+            <li><a href="#lab">Ateliers freestyle</a></li>
+            <li><a href="#themes">Thèmes et méthodes</a></li>
+            <li><a href="#calendar">Calendrier</a></li>
+          </ul>
         </li>
 
         <li class="menu-item has-sub">
           <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Workshops</button>
-          <div class="mega">
-            <a href="#collectifs" class="mega-item">
-              <h4>Collectifs</h4>
-              <p>Formats 2h à 3 jours. Objectif clarifier la danse et outiller les élèves. Thématiques adaptables niveau débutant à avancé.</p>
-            </a>
-            <a href="#ecoles" class="mega-item">
-              <h4>Écoles et studios</h4>
-              <p>Interventions pédagogiques clés en main. Tarifs indicatifs 300€ à 500€ selon durée effectif et déplacement.</p>
-            </a>
-            <a href="#marques" class="mega-item">
-              <h4>Marques et événements</h4>
-              <p>Ateliers performatifs et participatifs pour activation de communauté team building ou contenu social.</p>
-            </a>
-          </div>
+          <ul class="submenu">
+            <li><a href="#collectifs">Collectifs</a></li>
+            <li><a href="#ecoles">Écoles et studios</a></li>
+            <li><a href="#marques">Marques et événements</a></li>
+          </ul>
         </li>
 
         <li class="menu-item has-sub">
           <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Artistes</button>
-          <div class="mega">
-            <a href="#coaching" class="mega-item">
-              <h4>Coaching et présence</h4>
-              <p>Travail sur intention posture regard respiration storytelling scénique. Clarifier ce que tu veux donner et comment le donner.</p>
-            </a>
-            <a href="#direction" class="mega-item">
-              <h4>Direction de mouvement</h4>
-              <p>Clips lives TV shootings. Définition d’un langage moteur cohérent avec ton univers. Gestion figurants et danseurs.</p>
-            </a>
-            <a href="#choreo-pro" class="mega-item">
-              <h4>Chorégraphie</h4>
-              <p>Création originale solo duo troupe. Possibilité d’inviter des spécialistes style précis selon besoin.</p>
-            </a>
-          </div>
+          <ul class="submenu">
+            <li><a href="#coaching">Coaching de présence</a></li>
+            <li><a href="#direction">Direction de mouvement</a></li>
+            <li><a href="#choreo-pro">Chorégraphie</a></li>
+          </ul>
         </li>
 
         <li><a class="top-link" href="#about">À propos</a></li>
@@ -101,12 +61,10 @@
 
     <div class="social">
       <a class="icon" href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp">
-        <!-- WhatsApp SVG -->
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 4.6A9.86 9.86 0 0 0 12.05 2C6.54 2 2.05 6.49 2.05 12a9.9 9.9 0 0 0 1.35 5l-1.43 5.02 5.17-1.36A9.93 9.93 0 0 0 12.05 22c5.51 0 10-4.49 10-10 0-2.67-1.04-5.18-2.65-7.4zM12.05 20a7.94 7.94 0 0 1-4.27-1.23l-.3-.18-3.06.81.82-2.95-.2-.31A7.9 7.9 0 0 1 4.05 12c0-4.39 3.61-7.95 8-7.95S20 7.61 20 12s-3.56 8-7.95 8zm4.39-5.88c-.24-.12-1.42-.7-1.64-.77-.22-.08-.38-.12-.55.12-.16.23-.63.77-.77.93-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.18-.7-.62-1.18-1.38-1.32-1.62-.14-.24-.02-.37.1-.49.1-.1.24-.25.36-.38.12-.13.16-.22.24-.37s.04-.28-.02-.4c-.06-.12-.55-1.33-.76-1.82-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.4.06-.61.28s-.8.78-.8 1.9.82 2.2.94 2.36c.12.16 1.61 2.46 3.92 3.45.55.24.97.38 1.3.49.55.17 1.06.15 1.46.09.45-.07 1.42-.58 1.62-1.15.2-.57.2-1.06.14-1.15-.06-.09-.22-.15-.46-.27z"/></svg>
       </a>
       <a class="icon" href="https://www.instagram.com/kreesama" target="_blank" aria-label="Instagram">
-        <!-- Instagram SVG -->
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.3a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.3z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm6-1.2a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.3z"/></svg>
       </a>
       <a class="lang" href="en/index.html" aria-label="English version">EN</a>
     </div>
@@ -118,73 +76,84 @@
   <section class="hero" aria-label="Slogan">
     <p class="kicker">Paris Bruxelles Europe Monde</p>
     <h1 class="slogan">Bouger plus clair. Danser plus vrai.</h1>
-    <p class="lead">Des formats simples qui donnent des résultats visibles. Cours collectifs ateliers de recherche HipHopLab workshops immersifs direction de mouvement pour artistes coaching de présence. Réservations et annonces sur Instagram.</p>
+    <p class="lead">Formats simples résultats visibles. Cours collectifs HipHop Choreo ateliers de recherche HipHopLab workshops immersifs direction de mouvement pour artistes coaching de présence. Réservations et annonces sur Instagram.</p>
     <div class="cta-row">
       <a class="btn primary" href="https://wa.me/33663841018" target="_blank">Réserver un cours</a>
-      <a class="btn ghost" href="https://wa.me/33663841018?text=Appel%20découverte%2015%20min" target="_blank">Appel découverte 15 min</a>
+      <a class="btn ghost" href="https://wa.me/33663841018?text=Appel%20d%C3%A9couverte%2015%20min" target="_blank">Appel découverte 15 min</a>
     </div>
   </section>
 
   <section id="choreo" class="section">
     <h2>HipHop Choreo — Vendredi 20h30 22h00</h2>
-    <p class="just">Centre de Danse du Marais salle Mozart 41 rue du Temple Paris. On construit une choré sur deux à trois séances en gardant la musicalité l’intention et la lisibilité comme repères. Niveau ouvert. Les cartes 5 et 10 sont valables ici et sur certains samedis HipHopLab.</p>
-    <div class="card-row">
-      <a class="card" href="#passes">
-        <h3>Cartes 5 et 10</h3>
-        <p>80€ valable 6 semaines. 150€ valable 3 mois.</p>
-      </a>
-      <a class="card" href="#infos">
-        <h3>Infos pratiques</h3>
-        <p>Tenue baskets eau. Paiement espèces. Annulation 48h sinon séance due.</p>
-      </a>
-      <a class="card" href="https://www.instagram.com/kreesama" target="_blank">
-        <h3>Annonces</h3>
-        <p>Les ouvertures d’inscriptions se font sur Instagram.</p>
-      </a>
+    <div class="two">
+      <p class="just">Centre de Danse du Marais salle Mozart 41 rue du Temple Paris. On construit une choré sur deux à trois séances. Repères musicalité intention lisibilité pour progresser sans pression. Cartes 5 et 10 valables ici et sur certains samedis HipHopLab.</p>
+      <div class="cards">
+        <a class="card" href="#passes"><h3>Cartes 5 et 10</h3><p>80€ valable 6 semaines. 150€ valable 3 mois.</p></a>
+        <a class="card" href="#infos"><h3>Infos pratiques</h3><p>Tenue baskets eau. Paiement espèces. Annulation 48h sinon séance due.</p></a>
+        <a class="card" href="#esprit"><h3>Esprit du cours</h3><p>Bienveillance non jugement droit à l’échec exigence juste.</p></a>
+      </div>
+    </div>
+
+    <!-- méga déroulants dans la section -->
+    <div id="infos" class="mega-inline">
+      <details open>
+        <summary>Infos pratiques</summary>
+        <div class="inline-grid">
+          <div><h4>Lieu</h4><p>Centre de Danse du Marais salle Mozart 41 rue du Temple 75004 Paris.</p></div>
+          <div><h4>Niveau</h4><p>Tout niveau. Options plus simples ou plus denses proposées à chaque étape.</p></div>
+          <div><h4>Matériel</h4><p>Tenue confortable baskets bouteille d’eau.</p></div>
+          <div><h4>Règlement</h4><p>Espèces en début de séance. Annulation 48h minimum sinon séance due.</p></div>
+        </div>
+      </details>
+      <details id="esprit">
+        <summary>Esprit du cours</summary>
+        <div class="inline-grid">
+          <div><h4>Bienveillance</h4><p>Cadre sécurisé et respectueux. On progresse sans se comparer.</p></div>
+          <div><h4>Droit à l’échec</h4><p>On teste on rate on réessaie. L’erreur sert d’indicateur.</p></div>
+          <div><h4>Clarté</h4><p>Objectifs simples par blocs musique espace intention.</p></div>
+          <div><h4>Corps réel</h4><p>Adaptations morphologie genoux dos fatigue. On cherche l’utile avant le démonstratif.</p></div>
+        </div>
+      </details>
+      <details id="passes">
+        <summary>Cartes 5 et 10 cours</summary>
+        <p class="just">Carte 5 cours 80€ valable 6 semaines. Carte 10 cours 150€ valable 3 mois. Utilisables le vendredi HipHop Choreo et sur certains samedis HipHopLab selon calendrier.</p>
+      </details>
     </div>
   </section>
 
   <section id="lab" class="section">
     <h2>HipHopLab — Samedi 10h 12h selon dates</h2>
-    <p class="just">Ateliers freestyle à Paris 13 BNF Bibliothèque François Mitterrand ou Station F selon météo. Objectif développer des outils concrets pour clarifier ta danse sentir mieux la musique et densifier ton freestyle.</p>
+    <p class="just">Ateliers freestyle à Paris 13 BNF Bibliothèque François Mitterrand ou Station F selon météo. Objectif outiller la recherche clarifier la danse densifier le freestyle.</p>
 
     <div id="themes" class="grid-two">
       <details class="topic" open>
         <summary>Textures appuis transformation</summary>
-        <p class="just">Une même séquence déclinée en matières relâché précis élastique segmenté et en changements d’appuis. Comprendre ce que ça change dans le corps et l’intention.</p>
+        <p class="just">Une même séquence déclinée en matières relâché précis élastique segmenté et en changements d’appuis. Impact sur intention et lecture.</p>
       </details>
       <details class="topic">
         <summary>Lecture musicale et groove</summary>
-        <p class="just">Découper kick snare basse voix. Choisir quoi jouer et quand. Devenir un instrument de plus dans le morceau.</p>
+        <p class="just">Découper kick snare basse voix. Choisir quoi jouer et quand pour devenir un instrument de plus.</p>
       </details>
       <details class="topic">
         <summary>Transitions et connecteurs</summary>
-        <p class="just">Passer d’une idée à l’autre sans rupture. Connecteurs de direction de niveau de vitesse de rythme.</p>
+        <p class="just">Passer d’une idée à l’autre grâce aux connecteurs de direction de niveau de rythme ou d’énergie.</p>
       </details>
       <details class="topic">
         <summary>Niveaux et directions</summary>
-        <p class="just">Travailler 2D 3D diagonales rotations et repères dans l’espace pour une danse lisible.</p>
+        <p class="just">2D 3D diagonales rotations repères dans l’espace pour une danse lisible.</p>
       </details>
       <details class="topic">
         <summary>Flow continu et contrastes</summary>
-        <p class="just">Construire un flux puis créer des découpes des silences et des impacts pour gagner en densité.</p>
+        <p class="just">Créer un flux puis sculpter des découpes des silences des impacts.</p>
       </details>
       <details class="topic">
         <summary>Bras mains posture</summary>
         <p class="just">Habiller la danse sans surjouer. Lignes claires tracing coordination bras jambes.</p>
       </details>
-      <details class="topic">
-        <summary>Sol et adaptations</summary>
-        <p class="just">Chemins confortables pour descendre et remonter. Respect des genoux et de la morphologie de chacun.</p>
-      </details>
-      <details class="topic">
-        <summary>Duos trios conscience collective</summary>
-        <p class="just">Écoute contact regard rôles mouvants. Exister sans se dissoudre dans le groupe.</p>
-      </details>
     </div>
 
     <div class="cta-row">
-      <a class="btn primary" href="https://wa.me/33663841018?text=Réservation%20HipHopLab" target="_blank">Réserver HipHopLab</a>
+      <a class="btn primary" href="https://wa.me/33663841018?text=R%C3%A9servation%20HipHopLab" target="_blank">Réserver HipHopLab</a>
       <a class="btn ghost" href="https://www.instagram.com/kreesama" target="_blank">Dates sur Instagram</a>
     </div>
   </section>
@@ -192,21 +161,21 @@
   <section id="collectifs" class="section">
     <h2>Workshops</h2>
     <div class="grid-two">
+      <div class="panel" id="ecoles">
+        <h3>Écoles et studios</h3>
+        <p class="just">Interventions pédagogiques clés en main planning thèmes objectifs restitution. Tarif indicatif 300€ à 500€ selon durée effectif déplacements.</p>
+      </div>
+      <div class="panel" id="marques">
+        <h3>Marques et événements</h3>
+        <p class="just">Ateliers performatifs activations de communauté team building ou contenu social.</p>
+      </div>
       <div class="panel">
         <h3>Collectifs</h3>
-        <p class="just">De 2h à 3 jours. Parcours progressifs pour rendre la technique lisible et transférable. Idéal pour consolidations de rentrée ou intensifs d’été.</p>
-      </div>
-      <div class="panel">
-        <h3>Écoles et studios</h3>
-        <p class="just">Interventions pédagogiques sur mesure planning thèmes objectifs et restitution. Tarif indicatif 300€ à 500€ selon durée effectif et déplacements.</p>
-      </div>
-      <div class="panel">
-        <h3>Marques et événements</h3>
-        <p class="just">Ateliers activation de communauté team building show interactif. Références H&M Adidas Jordan Galeries Lafayette McDonald’s ShelterSuit Sweet Pants J&amp;B.</p>
+        <p class="just">De 2h à 3 jours. Progressions lisibles pour transformer les outils vus en réflexes utiles.</p>
       </div>
     </div>
     <div class="cta-row">
-      <a class="btn primary" href="mailto:krees.sama@gmail.com?subject=Devis%20Workshop&body=Bonjour%20Krees%2C%20je%20souhaite%20un%20devis%20pour%20un%20workshop%20...">Demander un devis</a>
+      <a class="btn primary" href="mailto:krees.sama@gmail.com?subject=Devis%20Workshop&body=Bonjour%20Krees%2C%20je%20souhaite%20un%20devis%20pour%20..." >Demander un devis</a>
     </div>
   </section>
 
@@ -215,25 +184,28 @@
     <div class="grid-two">
       <div class="panel">
         <h3>Coaching de présence</h3>
-        <p class="just">Travail sur respiration regard diction posture et intention. Objectif habiter la scène sans sur-jouer et créer un lien clair avec le public.</p>
+        <p class="just">Respiration regard posture diction intention et rythme. Construire un langage scénique clair sans sur-jeu.</p>
       </div>
-      <div class="panel">
+      <div class="panel" id="direction">
         <h3>Direction de mouvement</h3>
-        <p class="just">Définition d’un vocabulaire moteur pour clips lives TV. Gestion danseurs et figurants. Possibilité de co-direction avec spécialistes de styles.</p>
+        <p class="just">Clips lives TV shootings. Définition d’un vocabulaire moteur cohérent. Gestion danseurs figurants et dynamique de plateau.</p>
       </div>
-      <div class="panel">
+      <div class="panel" id="choreo-pro">
         <h3>Chorégraphie</h3>
-        <p class="just">Créations originales pour solo duo troupe. Accompagnement de l’artiste de la répétition au tournage ou à la scène.</p>
+        <p class="just">Créations originales solo duo troupe. Possibilité d’intégrer des spécialistes d’un style précis selon besoin.</p>
       </div>
     </div>
     <div class="cta-row">
-      <a class="btn primary" href="mailto:krees.sama@gmail.com?subject=Direction%20de%20mouvement%20%2F%20Coaching&body=Bonjour%20Krees%2C%20voici%20mon%20projet%20...">Parler d’un projet</a>
+      <a class="btn primary" href="mailto:krees.sama@gmail.com?subject=Direction%20de%20mouvement%20%2F%20Coaching&body=Bonjour%20Krees%2C%20voici%20mon%20projet%20..." >Parler d’un projet</a>
     </div>
   </section>
 
-  <section id="about" class="section">
+  <section id="about" class="section wide">
     <h2>À propos</h2>
-    <p class="just">Basé à Bruxelles je travaille entre Paris et l’Europe. Danseur chorégraphe et directeur de mouvement ancré dans le freestyle hip-hop. Mon approche est simple rendre la danse lisible honnête et efficace pour la scène la caméra et l’entraînement. Je transmets depuis 2010 et j’accompagne des artistes et des groupes sur la clarté du geste l’écoute musicale et la cohérence scénique.</p>
+    <div class="two">
+      <p class="just">Basé à Bruxelles je travaille régulièrement à Paris et me déplace en Europe. Danseur chorégraphe et directeur de mouvement ancré dans le freestyle hip hop. Mon axe clarifier la danse et la rendre lisible honnête et efficace pour la scène et l’image. Depuis 2010 j’enseigne j’entraîne et j’accompagne des artistes et des groupes sur la musicalité la qualité de mouvement les transitions et la présence.</p>
+      <p class="just">Côté références collaborations avec H&amp;M Adidas Jordan McDonald’s Galeries Lafayette ShelterSuit Sweet Pants J&amp;B ainsi qu’avec des artistes et collectifs de la scène hip hop. L’approche reste la même partir de la personne construire des outils solides et chercher l’expressivité juste.</p>
+    </div>
   </section>
 
   <section id="trust" class="section">
