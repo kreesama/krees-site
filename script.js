@@ -1,5 +1,4 @@
-// script.js
-// 1. Header hide on scroll down show on scroll up
+// script.js — header show or hide, sous menus stables, ancrages smooth
 let lastY = window.scrollY || 0;
 const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
@@ -9,9 +8,7 @@ window.addEventListener('scroll', () => {
   lastY = y;
 });
 
-// 2. Dropdowns that stay open while moving into submenu
-const items = document.querySelectorAll('.menu-item.has-sub');
-items.forEach(it => {
+document.querySelectorAll('.menu-item.has-sub').forEach(it => {
   let timer;
   const btn = it.querySelector('.menu-btn');
   const sub = it.querySelector('.submenu');
@@ -21,15 +18,12 @@ items.forEach(it => {
 
   it.addEventListener('mouseenter', () => { clearTimeout(timer); open(); });
   it.addEventListener('mouseleave', () => { timer = setTimeout(close, 220); });
-
   btn.addEventListener('focus', open);
   sub.addEventListener('focusin', open);
-  sub.addEventListener('focusout', e => {
-    if (!sub.contains(e.relatedTarget)) close();
-  });
+  sub.addEventListener('focusout', e => { if (!sub.contains(e.relatedTarget)) close(); });
 });
 
-// 3. Smooth scroll for internal links
+// ancrages
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     const id = a.getAttribute('href').slice(1);
