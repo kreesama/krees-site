@@ -3,166 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krees Sama – Mouvements utiles, résultats visibles</title>
-  <!-- Police du slogan -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
-  <!-- Icônes FontAwesome pour WhatsApp et Instagram -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Krees Sama – Danseur, Chorégraphe et Coach artistique basé entre Paris et Bruxelles. Cours hebdomadaires, workshops, labs et coaching artistique.">
+  <title>Krees Sama | Danseur & Coach Hip-Hop</title>
+  <!-- Font: Montserrat (for general text) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header id="navbar" class="nav">
-  <div class="nav-left">
-    <a href="index.html" class="brand">Krees Sama</a>
+
+<header>
+  <div class="top-bar">
+    <!-- Social icons (left) -->
+    <div class="social-icons">
+      <a href="https://instagram.com/kreesama" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <!-- Mobile logo (center; shown on mobile only) -->
+    <div class="mobile-logo">Krees Sama</div>
+    <!-- Language switch and burger (right) -->
+    <div class="lang-switch">
+      <a href="index.html" aria-label="Français">🇫🇷</a>
+      <a href="index-en.html" aria-label="English">🇬🇧</a>
+    </div>
+    <button class="burger" aria-label="Menu"><i id="burger-icon" class="fas fa-bars"></i></button>
   </div>
-  <nav class="nav-right">
-    <ul>
-      <li class="dropdown">
-        <a href="#choreo">HipHop Choreo</a>
+  <!-- Main navigation (name and menu) -->
+  <nav class="main-nav">
+    <a href="#hero" class="logo desktop-logo">Krees Sama</a>
+    <ul class="menu">
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#choreo">Hip-Hop Choreo</a></li>
+      <li><a href="#lab">Hip-Hop Lab</a></li>
+      <li class="has-sub"><a href="#workshops">Workshops</a>
+        <ul class="submenu">
+          <li><a href="#atelier-freestyle">Atelier Freestyle</a></li>
+          <li><a href="#atelier-methodologie">Atelier Méthodologie</a></li>
+        </ul>
       </li>
-      <li class="dropdown">
-        <a href="#lab">HipHopLab</a>
+      <li class="has-sub"><a href="#coaching">Coaching</a>
+        <ul class="submenu">
+          <li><a href="#coaching-personnel">Coaching Personnel</a></li>
+          <li><a href="#direction-artistique">Direction Artistique</a></li>
+        </ul>
       </li>
-      <li class="dropdown">
-        <a href="#workshops">Workshops</a>
-      </li>
-      <li class="dropdown">
-        <a href="#artists">Accompagnement d’artistes</a>
-      </li>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <div class="nav-icons">
-    <a href="https://wa.me/33663841018" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="https://instagram.com/kreesama" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-    <a href="index_en.html" class="lang">🇬🇧</a>
-    <span class="lang-current">🇫🇷</span>
-  </div>
 </header>
 
-<main>
-  <!-- Section Hero -->
-  <section class="hero">
-    <div class="hero-text">
-      <p class="hero-loc">PARIS • BRUXELLES • EUROPE • MONDE</p>
-      <h1 class="slogan">Bouger plus clair. Danser plus vrai.</h1>
-      <p class="intro">
-        Des formats simples avec des résultats visibles. Cours collectifs HipHop Choreo, ateliers de recherche HipHopLab, workshops immersifs, direction de mouvement pour artistes et coaching de présence. Annonces et réservations sur Instagram.
-      </p>
-      <div class="cta">
-        <a href="https://wa.me/33663841018" class="btn-primary">Réserver un cours</a>
-        <a href="https://wa.me/33663841018?text=Je%20souhaite%20un%20appel%20d%C3%A9couverte" class="btn-secondary">Appel découverte 15 min</a>
-      </div>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <h1 class="tagline">Bouger plus clair dans ses plus vrais</h1>
+  <a href="#apropos" class="scroll-down" aria-label="Faire défiler vers le contenu"><i class="fas fa-chevron-down"></i></a>
+</section>
 
-  <!-- HipHop Choreo -->
-  <section id="choreo">
-    <h2>HipHop Choreo&nbsp;—&nbsp;vendredi 20h30–22h00</h2>
-    <p>
-      Centre de Danse du Marais, salle Mozart, 41 rue du Temple, Paris. Nous construisons une choré sur deux à trois séances en gardant la musicalité, l’intention et la lisibilité comme repères. L’objectif est d’avancer sans pression avec des options adaptées à chaque personne.
-    </p>
-    <div class="cards">
-      <div class="card">
-        <h3>Cartes 5 et 10</h3>
-        <p>5 cours 80 € (valable 6 semaines). 10 cours 150 € (valable 3 mois). Utilisables le vendredi et certains samedis HipHopLab.</p>
-      </div>
-      <div class="card">
-        <h3>Infos pratiques</h3>
-        <p>Tenue confortable, baskets et eau. Paiement en espèces. Annulation au moins 48 h à l’avance sinon la séance est due. Ouvertures d’inscriptions annoncées sur Instagram.</p>
-      </div>
-      <div class="card">
-        <h3>Esprit du cours</h3>
-        <p>Exigence juste, bienveillance, non-jugement et droit à l’erreur. On progresse ensemble avec clarté, rythme et plaisir.</p>
-      </div>
-    </div>
-  </section>
+<!-- About Section -->
+<section id="apropos" class="section about">
+  <h2>À propos de Krees Sama</h2>
+  <p>Christophe « Krees Sama » Jallerat est un danseur hip-hop professionnel basé entre Paris et Bruxelles. Né à Djibouti en 1986 d’un père français et d’une mère éthiopienne, il découvre la danse hip-hop à 15 ans en Martinique, en particulier le popping. Au fil des années, son style évolue et il se spécialise en freestyle hip-hop:contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}. Attiré par l’improvisation, il participe à de nombreuses battles et intègre des crews reconnus (FORZESOUND, SECTION C). Il fonde ensuite son propre groupe Division For One et rejoint la compagnie ELAM de Léa Djyl, affirmant son ancrage dans la culture hip-hop.</p>
+  <p>Dès 2010, Krees transmet sa passion en enseignant régulièrement:contentReference[oaicite:2]{index=2}. Fort de son expérience (plus de 10 ans de pédagogie) et de sa formation, il développe depuis 2020 sa propre méthode d’entraînement pour accompagner les danseurs de tous niveaux. Sa pédagogie se veut humaine et inclusive : bienveillance, droit à l’échec et exigence sont au cœur de son enseignement, permettant à chacun de progresser dans un cadre encourageant.</p>
+  <p>Au cours de sa carrière, Krees a collaboré avec de nombreuses marques et artistes. <strong>Clients (danse/chorégraphie)</strong> : H&M, Adidas, McDonald’s, Jordan, etc. <strong>Partenaires (direction artistique)</strong> : Sweet Pants, et d’autres collaborations créatives sans redondance.</p>
+</section>
 
-  <!-- HipHop Lab -->
-  <section id="lab">
-    <h2>HipHopLab — samedi 10h00–12h00</h2>
-    <p>
-      Bibliothèque nationale François Mitterrand (BNF) à Paris ou en salle selon la météo. L’objectif est d’explorer en autonomie et à travers des thèmes précis pour développer sa capacité à improviser en partant de soi.
-    </p>
-    <div class="cards">
-      <div class="card">
-        <h3>Thèmes et méthodes</h3>
-        <p>
-          Textures et appuis. Transitions et connecteurs. Flow et contrastes. Lecture musicale. Niveaux et directions. Bras, mains et posture.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Calendrier</h3>
-        <p>Dates et ouvertures d’inscriptions annoncées sur Instagram. Le lieu est confirmé la veille.</p>
-      </div>
-      <div class="card">
-        <h3>Réserver HipHopLab</h3>
-        <a href="https://wa.me/33663841018?text=Je%20souhaite%20réserver%20HipHopLab" class="btn-secondary">Envoyer un message</a>
-      </div>
-    </div>
-    <div class="accordion">
-      <details>
-        <summary>Transitions et connecteurs</summary>
-        <p>Comment passer d’un mouvement à l’autre sans rupture, en intégrant des points de connexion et de respiration.</p>
-      </details>
-      <details>
-        <summary>Lecture musicale</summary>
-        <p>Interpréter les accents, contretemps et nuances pour créer une danse organique et riche.</p>
-      </details>
-      <details>
-        <summary>Bras, mains, posture</summary>
-        <p>Apprendre à “habiller” la danse grâce à des qualités variées (lourds, suspendus, aériens) et une posture claire.</p>
-      </details>
-    </div>
-  </section>
+<!-- Classes Section: Hip-Hop Choreo -->
+<section id="choreo" class="section choreo">
+  <h2>Hip-Hop Choreo – Cours hebdomadaires</h2>
+  <p>Chaque semaine, Krees enseigne le Hip-Hop New Style à travers des cours chorégraphiques dynamiques. Axés sur les fondations, le groove, la technique, l’énergie et la précision, ses cours offrent un entraînement complet aux danseurs:contentReference[oaicite:3]{index=3}. Débutant ou avancé, chacun peut évoluer à son rythme dans une ambiance positive et motivante, où la créativité de chacun est valorisée.</p>
+  <p>Horaires des cours : tous les vendredis de 20h30 à 22h00, et certains samedis de 10h00 à 12h00 (Paris).<br>
+  Formules disponibles :</p>
+  <ul class="pricing">
+    <li>Carte 5 cours : 80€ (valable 6 semaines)</li>
+    <li>Carte 10 cours : 150€ (valable 3 mois)</li>
+  </ul>
+  <p>Les cartes permettent d’accéder aux cours du vendredi soir et aux sessions du samedi indiquées. Un suivi continu sur plusieurs semaines pour consolider vos acquis et progresser efficacement.</p>
+  <a href="https://wa.me/33663841018" target="_blank" class="btn">Réserver un cours</a>
+</section>
 
-  <!-- Workshops -->
-  <section id="workshops">
-    <h2>Workshops collectifs</h2>
-    <p>Formats clés en main pour associations, écoles, studios et structures culturelles. Pédagogie claire, musicale et accessible.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>Écoles et studios</h3>
-        <p>Modules de 2 h à 3 h ou cycles intensifs. Thèmes adaptables au niveau de vos élèves. Devis rapide.</p>
-      </div>
-      <div class="card">
-        <h3>Marques et événements</h3>
-        <p>Interventions orientées image et expérience publique. Références : H&M, Adidas, Jordan, McDonald’s, Galeries Lafayette, Sweet Pants, ShelterSuit, J&B.</p>
-      </div>
-    </div>
-  </section>
+<!-- Lab Section: Hip-Hop Lab -->
+<section id="lab" class="section lab">
+  <h2>Hip-Hop Lab</h2>
+  <p>Les Hip-Hop Labs sont des sessions mensuelles exclusives animées par Krees à la BnF (Bibliothèque nationale de France, Paris). L’objectif : offrir un laboratoire de freestyle où les danseurs explorent en profondeur leur créativité. Chaque Lab propose une thématique spécifique afin de développer l’autonomie, l’improvisation et la confiance en soi en danse. C’est un espace d’expérimentation bienveillant, propice à repousser ses limites artistiques aux côtés de Krees et d’autres passionnés.</p>
+  <p><strong>Prochaines sessions Hip-Hop Lab :</strong></p>
+  <ul class="schedule">
+    <li>Samedi 6 décembre 2025 (14h–17h) – Thème : Musicalité & Groove</li>
+    <li>Samedi 10 janvier 2026 (14h–17h) – Thème : Expression & Émotions</li>
+    <li>Samedi 7 février 2026 (14h–17h) – Thème : Créativité & Autonomie</li>
+  </ul>
+  <p>Les Labs se déroulent sur l’esplanade de la BnF et sont ouverts aux danseurs souhaitant enrichir leur style personnel. Places limitées à chaque session pour garantir un accompagnement de qualité.</p>
+  <a href="https://wa.me/33663841018" target="_blank" class="btn">S’inscrire au prochain Lab</a>
+</section>
 
-  <!-- Accompagnement d’artistes -->
-  <section id="artists">
-    <h2>Accompagnement d’artistes</h2>
-    <p>
-      Coaching scénique, direction de mouvement et chorégraphie pour clip ou live. Travail sur la posture, la présence et l’authenticité. Exemples : accompagnement de chanteurs, performeurs et rappeurs en studio et sur scène.
-    </p>
-  </section>
+<!-- Workshops Section -->
+<section id="workshops" class="section workshops">
+  <h2>Workshops</h2>
+  <p>Krees propose régulièrement des workshops intensifs en France et à l’international pour partager sa passion et son expertise. Invité en tant que professeur lors de stages et dans des écoles de danse, il offre aux participants l’opportunité de se perfectionner lors de sessions spécifiques et immersives. Ces workshops « premium » sont l’occasion d’apprendre auprès d’un chorégraphe de haut niveau, dans une atmosphère d’émulation collective.</p>
+  <h3 id="atelier-freestyle">Atelier Freestyle</h3>
+  <p>Un workshop axé sur le freestyle et l’improvisation. Pendant cet atelier, Krees met l’accent sur la créativité instantanée : techniques pour aborder les battles, travail d’écoute musicale, développement du style personnel en situation de cypher. Idéal pour gagner en aisance dans l’improvisation et booster sa confiance en battle, le tout avec les conseils d’un expert des compétitions.</p>
+  <h3 id="atelier-methodologie">Atelier Méthodologie</h3>
+  <p>Un workshop dédié à la méthode d’entraînement de Krees. À travers des exercices innovants et progressifs, il partage sa pédagogie pour améliorer technique, musicalité et créativité. Les participants découvrent de nouveaux outils pour affiner leur danse et approfondir leur compréhension du mouvement. Cet atelier est parfait pour celles et ceux qui souhaitent structurer leur entraînement et passer un cap dans leur pratique.</p>
+  <p>Tout au long de l’année, d’autres workshops thématiques sont organisés (chorégraphie, développement personnel du danseur, etc.), y compris à Bruxelles afin de partager ces expériences avec la communauté belge. Les prochaines dates de workshop sont annoncées sur Instagram et via la newsletter.</p>
+  <a href="https://wa.me/33663841018" target="_blank" class="btn">Organiser un workshop avec Krees</a>
+</section>
 
-  <!-- À propos -->
-  <section id="about">
-    <h2>À propos</h2>
-    <p>
-      Né à Djibouti, Krees Sama découvre la danse hip-hop à 15 ans. Après 5 ans d’improvisation et de battles, il se spécialise en HipHop Freestyle. 
-      Il rejoint les groupes FORZESOUND, SECTION C et Division For One, et enseigne depuis plus de 15 ans. Ses références comprennent des artistes comme Gims, Dadju, Mister V et Ozzy, et des marques comme H&M, Jordan ou Sweet Pants. 
-      Sa pédagogie repose sur l’écoute du corps, l’acceptation de l’erreur et la clarté des intentions. Chaque cours vise à libérer l’expression personnelle tout en cultivant la technique et le rythme.
-    </p>
-  </section>
+<!-- Coaching Section -->
+<section id="coaching" class="section coaching">
+  <h2>Coaching Artistique</h2>
+  <p>En tant que coach artistique, Krees accompagne danseurs et artistes dans la réalisation de leurs objectifs. Son coaching sur-mesure s’adapte aux besoins de chacun, qu’il s’agisse d’améliorer sa danse ou de concrétiser un projet scénique. Avec son œil expert et sa bienveillance, Krees aide à révéler le plein potentiel artistique de chaque personne.</p>
+  <h3 id="coaching-personnel">Coaching Personnel</h3>
+  <p>Suivi individuel et personnalisé pour les danseurs souhaitant accélérer leur progression. Technique, musicalité, expression scénique… Krees élabore un programme sur mesure pour travailler les points clés et développer votre style unique. Que ce soit pour préparer une audition, une compétition ou simplement gagner en confiance, bénéficiez d’un accompagnement dédié qui vous poussera vers l’excellence.</p>
+  <h3 id="direction-artistique">Direction Artistique</h3>
+  <p>Krees intervient également en tant que directeur de mouvement et conseiller artistique sur divers projets professionnels : clips musicaux, spectacles, publicités ou événements. Fort de ses collaborations avec de grandes marques, il apporte sa vision créative pour concevoir des chorégraphies impactantes et cohérentes avec l’univers du projet. Son expertise garantit une direction artistique solide, du concept initial à la performance finale.</p>
+  <a href="https://wa.me/33663841018" target="_blank" class="btn">Contactez Krees pour votre coaching</a>
+</section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Pour réserver un cours, un HipHopLab ou un atelier, ou pour toute demande professionnelle :</p>
-    <ul>
-      <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/33663841018">+33 6 63 84 10 18</a></li>
-      <li><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/kreesama">@kreesama</a></li>
-      <li><i class="fa-solid fa-envelope"></i> <a href="mailto:krees.sama@gmail.com">krees.sama@gmail.com</a></li>
-    </ul>
-  </section>
-</main>
+<footer>
+  <div class="footer-social">
+    <a href="https://instagram.com/kreesama" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/33663841018" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <div class="footer-note">© 2025 Krees Sama. Tous droits réservés.</div>
+</footer>
 
+<!-- Main JS -->
 <script src="script.js"></script>
 </body>
 </html>
