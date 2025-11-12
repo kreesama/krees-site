@@ -1,32 +1,26 @@
-// année auto et petites interactions
-document.getElementById("y").textContent = new Date().getFullYear();
+// année auto
+const y = document.getElementById("y"); if (y) y.textContent = new Date().getFullYear();
 
-// menus déroulants au clavier et sur mobile
+// ouverture/fermeture propre des menus au clic + clavier
 document.querySelectorAll(".dd-btn").forEach(btn=>{
-  btn.addEventListener("click", ()=> {
+  btn.addEventListener("click", e=>{
     const panel = btn.nextElementSibling;
-    const opened = document.querySelector(".dd-panel.open");
-    if(opened && opened!==panel) opened.classList.remove("open");
+    document.querySelectorAll(".dd-panel").forEach(p=>{ if(p!==panel) p.classList.remove("open") });
     panel.classList.toggle("open");
   });
+  btn.addEventListener("keydown", e=>{
+    if(e.key==="ArrowDown"){e.preventDefault(); btn.nextElementSibling.querySelector("a")?.focus();}
+  });
 });
-document.addEventListener("click", (e)=>{
+document.addEventListener("click", e=>{
   if(!e.target.closest(".dd")) document.querySelectorAll(".dd-panel.open").forEach(p=>p.classList.remove("open"));
 });
 
-// carousel auto et boutons
-document.querySelectorAll(".carousel").forEach(c=>{
-  const track = c.querySelector(".track");
-  const left = c.querySelector(".left");
-  const right = c.querySelector(".right");
-  const step = 320;
-
-  left.addEventListener("click", ()=> track.scrollBy({left:-step,behavior:"smooth"}));
-  right.addEventListener("click", ()=> track.scrollBy({left: step,behavior:"smooth"}));
-
-  if(c.dataset.auto==="true"){
-    let auto = setInterval(()=> track.scrollBy({left: step,behavior:"smooth"}), 3500);
-    c.addEventListener("mouseenter", ()=> clearInterval(auto));
-    c.addEventListener("mouseleave", ()=> auto = setInterval(()=> track.scrollBy({left: step,behavior:"smooth"}), 3500));
-  }
+// améliorer l’accessibilité des <details> (fermer les autres quand on en ouvre un)
+document.querySelectorAll(".accordion details").forEach(d=>{
+  d.addEventListener("toggle", ()=>{
+    if(d.open){
+      document.querySelectorAll(".accordion details").forEach(o=>{ if(o!==d) o.removeAttribute("open"); });
+    }
+  });
 });
