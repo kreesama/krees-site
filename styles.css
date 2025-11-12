@@ -3,19 +3,20 @@
   --surface:#12151a;
   --text:#e8ebef;
   --muted:#a8b0bb;
-  --accent:#0ea5a5; /* sarcelle premium */
+  --accent:#0ea5a5;      /* vert sarcelle premium */
   --accent-2:#0fbfc0;
-  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --shadow:0 12px 32px rgba(0,0,0,.35);
+  --max:1280px;          /* plus large pour remplir l’espace */
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  background:radial-gradient(1200px 600px at 50% -20%, rgba(15,191,192,.08), transparent) , var(--bg);
+  background:radial-gradient(1200px 600px at 50% -20%, rgba(15,191,192,.08), transparent), var(--bg);
   color:var(--text);
-  font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
-  line-height:1.5;
+  font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  line-height:1.55;
 }
 
 /* Header hide on scroll */
@@ -28,101 +29,99 @@ body{
 }
 .header.hide{ transform:translateY(-100%) }
 
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 20px}
+.nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 20px}
 .brand{
-  font-family:"Inter",system-ui,sans-serif;
-  font-weight:800;
-  letter-spacing:.3px;
-  padding:.25rem .6rem;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:12px;
-  color:var(--text); text-decoration:none;
+  font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+  font-weight:800; letter-spacing:.2px;
+  padding:.25rem .6rem; border:1px solid rgba(255,255,255,.12);
+  border-radius:12px; color:var(--text); text-decoration:none;
   background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
 }
 
-/* main nav */
+/* nav */
 .main-nav{flex:1}
 .menu{list-style:none;margin:0;padding:0;display:flex;gap:8px;align-items:center}
 .menu-item{position:relative}
 .menu-btn,.top-link{
-  background:none;border:0;color:var(--text);font:600 14px/1 "Manrope",sans-serif;
-  padding:10px 12px;border-radius:10px;cursor:pointer;
+  background:none;border:0;color:var(--text);font:700 14px/1 "Manrope",sans-serif;
+  padding:10px 12px;border-radius:10px;cursor:pointer
 }
 .top-link{text-decoration:none;display:inline-block}
 .menu-btn:hover,.top-link:hover{background:rgba(255,255,255,.06)}
 
-/* mega menu */
-.mega{
-  position:absolute; left:0; top:calc(100% + 8px); width:540px;
-  display:none; grid-template-columns:1fr 1fr; gap:10px;
-  background:var(--surface); padding:14px; border:1px solid rgba(255,255,255,.08); border-radius:14px;
-  box-shadow:var(--shadow);
+/* simple dropdown */
+.submenu{
+  position:absolute; left:0; top:calc(100% + 6px); display:none;
+  min-width:240px; background:var(--surface); border:1px solid rgba(255,255,255,.08);
+  border-radius:12px; box-shadow:var(--shadow); padding:8px;
 }
-.has-sub:hover .mega, .has-sub:focus-within .mega{display:grid}
-.mega-item{
-  display:block; text-decoration:none; color:var(--text); padding:10px; border-radius:12px; background:rgba(255,255,255,.02);
-  border:1px solid rgba(255,255,255,.06);
+.submenu li{list-style:none}
+.submenu a{
+  display:block; padding:10px 12px; color:var(--text); text-decoration:none; border-radius:10px;
 }
-.mega-item:hover{border-color:rgba(255,255,255,.18); background:rgba(255,255,255,.04)}
-.mega-item h4{margin:.2rem 0 .2rem 0; font-weight:700; font-size:14px}
-.mega-item p{margin:0; color:var(--muted); font-size:13px; text-align:justify}
+.submenu a:hover{background:rgba(255,255,255,.06)}
+.has-sub:hover .submenu, .has-sub:focus-within .submenu{display:block}
 
-/* social icons */
+/* socials */
 .social{display:flex;align-items:center;gap:10px}
-.icon{width:28px;height:28px;display:inline-grid;place-items:center;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04)}
-.icon svg{width:16px;height:16px;fill:var(--text)}
+.icon{width:30px;height:30px;display:inline-grid;place-items:center;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
+.icon svg{width:17px;height:17px;fill:var(--text)}
 .icon:hover{border-color:var(--accent)}
-.lang{font:700 12px/1 "Manrope",sans-serif;color:var(--text);text-decoration:none;padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.1)}
+.lang{font:800 12px/1 "Manrope",sans-serif;color:var(--text);text-decoration:none;padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.12)}
 
 /* hero */
-.hero{max-width:1100px;margin:0 auto;padding:96px 20px 56px;text-align:center}
+.hero{max-width:var(--max);margin:0 auto;padding:110px 20px 56px;text-align:center}
 .kicker{color:var(--muted); text-transform:uppercase; letter-spacing:.14em; font-size:12px; margin:0 0 12px}
 .slogan{
-  font-family:"Inter",system-ui,sans-serif;
-  font-weight:900;
-  letter-spacing:-.01em;
-  font-size:clamp(36px,6vw,64px);
-  margin:.2rem auto .6rem;
-  max-width:1100px;
-  white-space:nowrap; /* force en une ligne si possible */
+  font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+  font-weight:800; letter-spacing:-.01em;
+  font-size:clamp(46px,6.8vw,78px);
+  margin:.2rem auto .6rem; max-width:var(--max);
+  white-space:nowrap;         /* force sur une seule ligne desktop */
 }
-.lead{max-width:760px;margin:0 auto;color:var(--muted);text-align:justify}
-.cta-row{display:flex;gap:12px;justify-content:center;margin:22px 0 0}
+.lead{max-width:880px;margin:0 auto;color:var(--muted);text-align:justify}
+.cta-row{display:flex;gap:14px;justify-content:center;margin:24px 0 0}
 .btn{
-  display:inline-block;padding:12px 16px;border-radius:14px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.14)
+  display:inline-block;padding:12px 16px;border-radius:14px;text-decoration:none;font-weight:800;border:1px solid rgba(255,255,255,.14)
 }
 .btn.primary{background:linear-gradient(180deg,var(--accent),var(--accent-2));color:#081013;border-color:transparent}
 .btn.ghost{background:transparent;color:var(--text)}
 .btn:hover{transform:translateY(-1px)}
 
 /* sections */
-.section{max-width:1100px;margin:0 auto;padding:56px 20px}
-.section h2{font:800 clamp(22px,3vw,30px) "Manrope",sans-serif;margin:0 0 8px}
+.section{max-width:var(--max);margin:0 auto;padding:60px 20px}
+.section.wide{max-width:var(--max)}
+.section h2{font:800 clamp(24px,3vw,32px) "Manrope",sans-serif;margin:0 0 12px}
 .section h3{font:700 16px "Manrope",sans-serif;margin:.3rem 0}
 .just{text-align:justify;color:var(--text)}
-
-.card-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .card{display:block;padding:14px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);text-decoration:none;color:var(--text)}
 .card:hover{border-color:rgba(255,255,255,.18)}
 
 .grid-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.panel{padding:14px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
 
-/* expandable topics */
+/* inline mega in section */
+.mega-inline details{margin:12px 0;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(255,255,255,.03);padding:10px}
+.mega-inline summary{cursor:pointer;font-weight:800}
+.inline-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.mega-inline h4{margin:.2rem 0;font-weight:800}
+
+/* topics */
 .topic{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:10px}
 .topic summary{cursor:pointer;font-weight:800}
 .topic[open]{border-color:rgba(255,255,255,.18)}
 
-/* panels */
-.panel{padding:14px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
-
-/* trust list */
+/* trust */
 .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;list-style:none;padding:0;margin:10px 0}
 .trust li{padding:10px 12px;border:1px solid rgba(255,255,255,.06);border-radius:12px;text-align:center;background:rgba(255,255,255,.02)}
 
 /* responsive */
-@media (max-width:900px){
-  .mega{width:90vw;grid-template-columns:1fr}
+@media (max-width:1000px){
+  .two{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
   .grid-two{grid-template-columns:1fr}
-  .card-row{grid-template-columns:1fr}
+  .inline-grid{grid-template-columns:1fr}
   .slogan{white-space:normal}
 }
