@@ -1,1 +1,220 @@
 
+<!DOCTYPE html>
+<html lang="fr" class="fr-active">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HipHop Experience</title>
+  <!-- Google Font (semi-bold, rounded sans-serif) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="fr-active">
+  <!-- Navigation Menu -->
+  <nav class="top-nav">
+    <!-- Mobile menu toggle checkbox -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="hamburger">☰</label>
+    <ul class="menu">
+      <li><a href="#" data-section="home"><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a></li>
+      <li><a href="#" data-section="hiphoplab">HipHopLab</a></li>
+      <li><a href="#" data-section="hiphopchoreo">HipHopChoreo</a></li>
+      <li><a href="#" data-section="workshops"><span class="lang-fr">Stages</span><span class="lang-en">Workshops</span></a></li>
+      <li><a href="#" data-section="about"><span class="lang-fr">À propos</span><span class="lang-en">About</span></a></li>
+      <li><a href="#" data-section="contact">Contact</a></li>
+    </ul>
+    <!-- Language toggle flags -->
+    <div class="lang-toggle">
+      <span id="fr-btn" class="lang-option">🇫🇷</span>
+      <span id="en-btn" class="lang-option">🇬🇧</span>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Main Page (Home) -->
+    <section id="home" class="page-section home-section">
+      <h1 class="slogan">
+        <span class="lang-fr">Bouger plus clair. Danser plus vrai.</span>
+        <span class="lang-en">Move clearer. Dance truer.</span>
+      </h1>
+    </section>
+
+    <!-- HipHopLab Section -->
+    <section id="hiphoplab" class="page-section">
+      <h2>HipHopLab</h2>
+      <p class="section-text">
+        <span class="lang-fr">
+          Cours hebdomadaires de hip-hop freestyle axés sur la créativité et l'improvisation.<br/>
+          <strong>Horaires :</strong> chaque lundi et mercredi à 18h.<br/>
+          <strong>Thématiques :</strong> groove, musicalité, flow, et confiance en soi.
+        </span>
+        <span class="lang-en">
+          Weekly hip-hop freestyle classes focused on creativity and improvisation.<br/>
+          <strong>Schedule:</strong> every Monday and Wednesday at 6 PM.<br/>
+          <strong>Themes:</strong> groove, musicality, flow, and self-confidence.
+        </span>
+      </p>
+      <!-- Horizontal carousel for HipHopLab (e.g., class highlights or photos) -->
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="card">
+            <!-- Example card content; replace with actual image or content if available -->
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>Freestyle Lab</strong><br/>Améliore ton improvisation</span>
+              <span class="lang-en"><strong>Freestyle Lab</strong><br/>Improve your improvisation</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>Musicalité</strong><br/>Ressens la musique</span>
+              <span class="lang-en"><strong>Musicality</strong><br/>Feel the music</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>Battle Prep</strong><br/>Prépare-toi aux battles</span>
+              <span class="lang-en"><strong>Battle Prep</strong><br/>Get ready for battles</span>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-area left"></div>
+        <div class="scroll-area right"></div>
+      </div>
+    </section>
+
+    <!-- HipHopChoreo Section -->
+    <section id="hiphopchoreo" class="page-section">
+      <h2>HipHopChoreo</h2>
+      <p class="section-text">
+        <span class="lang-fr">
+          Cours hebdomadaires de chorégraphie hip-hop pour apprendre des routines originales.<br/>
+          Accent sur la précision des mouvements, la synchronisation et la performance scénique.
+        </span>
+        <span class="lang-en">
+          Weekly hip-hop choreography classes to learn original routines.<br/>
+          Emphasis on movement precision, synchronization, and stage performance.
+        </span>
+      </p>
+      <!-- Horizontal carousel for HipHopChoreo (e.g., choreography highlights) -->
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="card">
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>Chorégraphie</strong><br/>Nouvelle routine chaque mois</span>
+              <span class="lang-en"><strong>Choreography</strong><br/>New routine each month</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>Style</strong><br/>Explore différents styles urbains</span>
+              <span class="lang-en"><strong>Style</strong><br/>Explore different street styles</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>Showcase</strong><br/>Prépare une représentation</span>
+              <span class="lang-en"><strong>Showcase</strong><br/>Prepare a performance</span>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-area left"></div>
+        <div class="scroll-area right"></div>
+      </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="workshops" class="page-section">
+      <h2><span class="lang-fr">Stages</span><span class="lang-en">Workshops</span></h2>
+      <p class="section-text">
+        <span class="lang-fr">
+          Masterclasses et workshops spéciaux pour découvrir de nouveaux styles et rencontrer des artistes invités.<br/>
+          <strong>Prochain workshop :</strong> à venir.
+        </span>
+        <span class="lang-en">
+          Special masterclasses and workshops to explore new styles and meet guest artists.<br/>
+          <strong>Next workshop:</strong> coming soon.
+        </span>
+      </p>
+      <!-- Horizontal carousel for Workshops (e.g., past or upcoming workshop highlights) -->
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="card">
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>Guest Instructor</strong><br/>Invité spécial international</span>
+              <span class="lang-en"><strong>Guest Instructor</strong><br/>International guest teacher</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>New Style</strong><br/>Initation au popping</span>
+              <span class="lang-en"><strong>New Style</strong><br/>Intro to popping</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img placeholder"></div>
+            <div class="card-info">
+              <span class="lang-fr"><strong>Jam Session</strong><br/>Freestyle collectif</span>
+              <span class="lang-en"><strong>Jam Session</strong><br/>Collective freestyle</span>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-area left"></div>
+        <div class="scroll-area right"></div>
+      </div>
+    </section>
+
+    <!-- À propos (About) Section -->
+    <section id="about" class="page-section">
+      <h2><span class="lang-fr">À propos</span><span class="lang-en">About Us</span></h2>
+      <p class="section-text">
+        <span class="lang-fr">
+          <strong>État d'esprit :</strong> Un esprit familial et bienveillant où chacun évolue à son rythme. Nous privilégions la qualité à la quantité, en mettant l'accent sur le plaisir de danser et le dépassement de soi.<br/>
+          <strong>Infos pratiques :</strong> Les cours ont lieu à Bruxelles. Tenue confortable recommandée; toutes les tranches d'âge sont bienvenues.
+        </span>
+        <span class="lang-en">
+          <strong>Our Philosophy:</strong> A friendly, family-like atmosphere where everyone progresses at their own pace. We value quality over quantity, focusing on the joy of dance and personal growth.<br/>
+          <strong>Practical info:</strong> Classes take place in Brussels. Comfortable attire recommended; all ages are welcome.
+        </span>
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section">
+      <h2>Contact</h2>
+      <p class="section-text">
+        <span class="lang-fr">Une question ? Contactez-nous directement sur WhatsApp ou Instagram :</span>
+        <span class="lang-en">Have a question? Reach out to us on WhatsApp or Instagram:</span>
+      </p>
+      <p class="section-text">
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener" class="contact-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/250px-WhatsApp.svg.png" alt="WhatsApp" class="social-icon" />
+          WhatsApp
+        </a><br/>
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener" class="contact-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/250px-Instagram_logo_2022.svg.png" alt="Instagram" class="social-icon" />
+          Instagram
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- Social media icons in footer -->
+    <div class="footer-content">
+      <a href="https://wa.me/1234567890" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/250px-WhatsApp.svg.png" alt="WhatsApp" class="social-icon" /></a>
+      <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/250px-Instagram_logo_2022.svg.png" alt="Instagram" class="social-icon" /></a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
