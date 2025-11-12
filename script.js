@@ -1,4 +1,3 @@
-// script.js — header show or hide, sous menus stables, ancrages smooth
 let lastY = window.scrollY || 0;
 const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
@@ -21,13 +20,4 @@ document.querySelectorAll('.menu-item.has-sub').forEach(it => {
   btn.addEventListener('focus', open);
   sub.addEventListener('focusin', open);
   sub.addEventListener('focusout', e => { if (!sub.contains(e.relatedTarget)) close(); });
-});
-
-// ancrages
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const id = a.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
-  });
 });
