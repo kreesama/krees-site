@@ -1,25 +1,25 @@
-// Menu accessibility open on click and keep open on hover
-document.querySelectorAll('.menu').forEach(menu=>{
-  const btn = menu.querySelector('.menu-btn');
-  const panel = menu.querySelector('.menu-panel');
-
-  const open = v => { menu.classList.toggle('open', v); btn.setAttribute('aria-expanded', String(v)); };
-
-  btn.addEventListener('click', e => { e.stopPropagation(); open(!menu.classList.contains('open')); });
-  menu.addEventListener('mouseenter', ()=>open(true));
-  menu.addEventListener('mouseleave', ()=>open(false));
+// Header hide on scroll down show on scroll up
+let lastY = window.scrollY;
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y > lastY && y > 80) header.classList.add('hide');
+  else header.classList.remove('hide');
+  lastY = y;
 });
 
-// Set year
-document.getElementById('year').textContent = new Date().getFullYear();
+// Keep mega menu open while moving into it
+document.querySelectorAll('.has-sub').forEach(li=>{
+  const btn = li.querySelector('.menu-btn');
+  const panel = li.querySelector('.mega');
 
-// Smooth scroll for internal anchors
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const id = a.getAttribute('href');
-    if(id.length > 1){
-      e.preventDefault();
-      document.querySelector(id)?.scrollIntoView({behavior:'smooth', block:'start'});
-    }
-  });
+  let over = false;
+  const open = () => { panel.style.display='grid'; btn.setAttribute('aria-expanded','true'); };
+  const close = () => { panel.style.display='none'; btn.setAttribute('aria-expanded','false'); };
+
+  btn.addEventListener('mouseenter', open);
+  li.addEventListener('mouseleave', ()=>{ if(!over) close(); });
+
+  panel.addEventListener('mouseenter', ()=>{ over = true; open(); });
+  panel.addEventListener('mouseleave', ()=>{ over = false; close(); });
 });
