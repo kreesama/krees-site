@@ -1,68 +1,30 @@
-// Navigation: single-page section switching
-const navLinks = document.querySelectorAll('.menu a');
-const sections = document.querySelectorAll('.page-section');
-let currentSection = 'home';
+// script.js  — header dynamique + liens sûrs + aide UX
+(() => {
+  // Header hide on scroll down / show on scroll up
+  const header = document.getElementById('siteHeader');
+  let lastY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > lastY && y > 80) header.classList.add('hide');
+    else header.classList.remove('hide');
+    lastY = y;
+  }, {passive:true});
 
-// Function to show a section by id and hide others
-function showSection(sectionId) {
-  sections.forEach(sec => {
-    sec.style.display = (sec.id === sectionId) ? 'block' : 'none';
+  // Keep dropdown open while moving towards it (hover already but add focus)
+  document.querySelectorAll('.has-dd > a, .dropdown a').forEach(el=>{
+    el.addEventListener('focus', e => e.currentTarget.closest('.has-dd')?.classList.add('focus'));
+    el.addEventListener('blur',  e => e.currentTarget.closest('.has-dd')?.classList.remove('focus'));
   });
-  currentSection = sectionId;
-}
 
-// Initialize: hide all sections except home
-showSection('home');
-
-// Handle nav link clicks
-navLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = link.getAttribute('data-section');
-    if (target) {
-      // Show target section
-      showSection(target);
-      // Update active link style
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      // If mobile menu was open, close it
-      document.getElementById('nav-toggle').checked = false;
-    }
+  // Smooth scroll for internal anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el){
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
   });
-});
-
-// Carousel auto-scroll on hover
-document.querySelectorAll('.carousel').forEach(carousel => {
-  const track = carousel.querySelector('.carousel-track');
-  const leftArea = carousel.querySelector('.scroll-area.left');
-  const rightArea = carousel.querySelector('.scroll-area.right');
-  let scrollLeftInterval, scrollRightInterval;
-  leftArea.addEventListener('mouseenter', () => {
-    scrollLeftInterval = setInterval(() => {
-      track.scrollBy({ left: -5, behavior: 'auto' });
-    }, 20);
-  });
-  leftArea.addEventListener('mouseleave', () => {
-    clearInterval(scrollLeftInterval);
-  });
-  rightArea.addEventListener('mouseenter', () => {
-    scrollRightInterval = setInterval(() => {
-      track.scrollBy({ left: 5, behavior: 'auto' });
-    }, 20);
-  });
-  rightArea.addEventListener('mouseleave', () => {
-    clearInterval(scrollRightInterval);
-  });
-});
-
-// Language toggle
-const frBtn = document.getElementById('fr-btn');
-const enBtn = document.getElementById('en-btn');
-frBtn.addEventListener('click', () => {
-  document.body.classList.add('fr-active');
-  document.body.classList.remove('en-active');
-});
-enBtn.addEventListener('click', () => {
-  document.body.classList.add('en-active');
-  document.body.classList.remove('fr-active');
-});
+})();
