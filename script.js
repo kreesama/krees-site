@@ -1,62 +1,59 @@
-// script.js  remplacer tout le fichier
-// Sticky header hide on scroll down, show on scroll up
+// sticky header : disparaît en scroll bas, revient en scroll haut
 let lastY = window.scrollY;
-const header = document.querySelector('[data-sticky]');
-const clamp = (n, min, max)=>Math.max(min, Math.min(n, max));
+const header = document.querySelector('.site-header');
+
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
-  header.classList.toggle('hide', y > lastY && y > 100);
+  if (!header) return;
+  if (y > lastY && y > 80) {
+    header.classList.add('hide');
+  } else {
+    header.classList.remove('hide');
+  }
   lastY = y;
 });
 
-// Horizontal scrollers  pointer moves and wheel
-document.querySelectorAll('[data-scroller]').forEach(scroller=>{
-  scroller.addEventListener('mousemove', e=>{
-    const r = scroller.getBoundingClientRect();
-    const ratio = clamp((e.clientX - r.left) / r.width, 0, 1);
-    scroller.scrollLeft = (scroller.scrollWidth - r.width) * ratio;
-  }, {passive:true});
-  scroller.addEventListener('wheel', e=>{
-    if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
+// carrousels horizontaux (choreo, lab, thèmes, workshops, artistes)
+document.querySelectorAll('[data-scroller]').forEach(scroller => {
+  scroller.addEventListener('wheel', e => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       scroller.scrollLeft += e.deltaY;
       e.preventDefault();
     }
-  }, {passive:false});
-});
+  }, { passive:false });
 
-// Chips open corresponding details
-document.querySelectorAll('.chip').forEach(chip=>{
-  chip.addEventListener('click', ()=>{
-    const id = chip.getAttribute('data-acc');
-    const el = document.querySelector(id);
-    if(el){ el.open = true; el.scrollIntoView({behavior:'smooth', block:'center'}); }
+  scroller.addEventListener('mousemove', e => {
+    if (e.buttons !== 1) return;
+    scroller.scrollLeft -= e.movementX;
   });
 });
 
-// Smooth anchor scrolling
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const id = a.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if(el){
+// smooth scroll pour les ancres
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const id = link.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target) {
       e.preventDefault();
-      el.scrollIntoView({behavior:'smooth', block:'start'});
+      target.scrollIntoView({ behavior:'smooth', block:'start' });
     }
   });
 });
 
-// Mobile burger  open/close + submenu toggles
+// burger + sous menus en mobile
 const burger = document.querySelector('.burger');
 const nav = document.getElementById('nav');
-if(burger){
-  burger.addEventListener('click', ()=>{
+
+if (burger && nav) {
+  burger.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(open));
   });
 }
-document.querySelectorAll('.has-sub > a').forEach(link=>{
-  link.addEventListener('click', e=>{
-    if(window.matchMedia('(max-width:860px)').matches){
+
+document.querySelectorAll('.has-sub > a').forEach(link => {
+  link.addEventListener('click', e => {
+    if (window.matchMedia('(max-width:840px)').matches) {
       e.preventDefault();
       link.parentElement.classList.toggle('open');
     }
