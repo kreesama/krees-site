@@ -1,18 +1,20 @@
+<!-- index.html (FR) -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Krees Sama  Mouvement utile  Résultats visibles</title>
+  <title>Krees Sama · Mouvement utile, résultats visibles</title>
 
+  <!-- Police plus moderne : Outfit + Inter -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="site-header" data-sticky>
-  <a class="brand" href="index.html">Krees Sama</a>
+  <a class="brand" href="index.html">Krees&nbsp;Sama</a>
 
   <button class="burger" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -20,7 +22,7 @@
 
   <nav id="nav" class="main-nav" aria-label="Navigation principale">
     <div class="nav-item has-sub">
-      <a href="#choreo">HipHop Choreo</a>
+      <a href="#choreo-section">HipHop&nbsp;Choreo</a>
       <div class="submenu">
         <a href="#choreo-section">Vue d’ensemble</a>
         <a href="#choreo-carousel">Infos clés</a>
@@ -28,7 +30,7 @@
     </div>
 
     <div class="nav-item has-sub">
-      <a href="#lab">HipHopLab</a>
+      <a href="#lab-section">HipHopLab</a>
       <div class="submenu">
         <a href="#lab-section">Vue d’ensemble</a>
         <a href="#lab-carousel">Infos clés</a>
@@ -43,48 +45,51 @@
   </nav>
 
   <div class="lang-social">
-    <a class="lang-toggle" href="en/index.html" aria-label="Version anglaise">EN 🇬🇧</a>
+    <a class="lang-toggle" href="en/index.html" aria-label="Version anglaise">EN&nbsp;🇬🇧</a>
 
-    <a class="icon-link top" href="https://wa.me/33663841018" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <!-- logo WhatsApp simple -->
-      <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true">
-        <path fill="currentColor" d="M16 3C9.4 3 4 8.3 4 14.8c0 2.6.9 5 2.4 7L4 29l7.4-2.4c2 1.1 4.2 1.7 6.6 1.7 6.6 0 12-5.3 12-11.8C30 8.3 22.6 3 16 3z"/>
-        <path fill="currentColor" d="M22 18.8c-.3-.2-1.8-.9-2.1-1s-.5-.2-.8.2-1 1.1-1.2 1.3-.4.3-.7.1c-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.4s0-.5.2-.7l.4-.5c.1-.2.2-.4.3-.6.1-.2.1-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.3 2.3 3.6 5.6 5c3.3 1.4 3.3.9 3.9.9.6-.1 1.9-.7 2.2-1.5.3-.8.3-1.4.2-1.6 0-.1-.3-.3-.6-.5z"/>
+    <!-- icônes seules -->
+    <a class="icon-only" href="https://wa.me/33663841018" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 3C9.4 3 4 8.3 4 14.8c0 2.6.9 5 2.4 7L4 29l7.4-2.4c2 1.1 4.2 1.7 6.6 1.7 6.6 0 12-5.3 12-11.8C30 8.3 22.6 3 16 3z"/>
+        <path d="M22 18.8c-.3-.2-1.8-.9-2.1-1s-.5-.2-.8.2-1 1.1-1.2 1.3-.4.3-.7.1c-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.4s0-.5.2-.7l.4-.5c.1-.2.2-.4.3-.6.1-.2.1-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.3 2.3 3.6 5.6 5c3.3 1.4 3.3.9 3.9.9.6-.1 1.9-.7 2.2-1.5.3-.8.3-1.4.2-1.6 0-.1-.3-.3-.6-.5z"/>
       </svg>
     </a>
 
-    <a class="icon-link top" href="https://www.instagram.com/kreesama" target="_blank" rel="noopener" aria-label="Instagram">
-      <!-- logo Instagram simple -->
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-        <path fill="currentColor" d="M12 2.3c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .5 1.5 1 .5.5.8.9 1 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.5 1-1 1.5-.5.5-.9.8-1.5 1-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.5-1.5-1-.5-.5-.8-.9-1-1.5-.2-.5-.3-1.2-.4-2.4C2.3 15.6 2.3 15.2 2.3 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.5-1 1-1.5.5-.5.9-.8 1.5-1 .5-.2 1.2-.3 2.4-.4C8.4 2.3 8.8 2.3 12 2.3z"/>
-        <path fill="currentColor" d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.3A4.1 4.1 0 1 1 16.1 12 4.1 4.1 0 0 1 12 16.1z"/>
-        <circle fill="currentColor" cx="18.4" cy="5.6" r="1.1"/>
+    <a class="icon-only" href="https://www.instagram.com/kreesama" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.3c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .5 1.5 1 .5.5.8.9 1 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.5 1-1 1.5-.5.5-.9.8-1.5 1-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.5-1.5-1-.5-.5-.8-.9-1-1.5-.2-.5-.3-1.2-.4-2.4C2.3 15.6 2.3 15.2 2.3 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.5-1 1-1.5.5-.5.9-.8 1.5-1 .5-.2 1.2-.3 2.4-.4C8.4 2.3 8.8 2.3 12 2.3z"/>
+        <path d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.3A4.1 4.1 0 1 1 16.1 12 4.1 4.1 0 0 1 12 16.1z"/>
+        <circle cx="18.4" cy="5.6" r="1.1"/>
+      </svg>
+    </a>
+
+    <a class="icon-only" href="mailto:krees.sama@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.6 2l7.1 4.9c.2.1.4.1.6 0L19.4 7H4.6zm15.4 1.5-6.4 4.4a2.6 2.6 0 0 1-2.8 0L4.4 8.5V17h15.6V8.5z"/>
       </svg>
     </a>
   </div>
 </header>
 
 <main>
-  <!-- HERO -->
   <section class="hero">
     <p class="cities">Paris · Bruxelles · Europe · Monde</p>
-    <h1 class="hero-title nowrap">Bouger plus clair. Danser plus vrai.</h1>
+    <h1 class="hero-title hero-one-line">Bouger plus clair. Danser plus vrai.</h1>
     <p class="hero-sub">
       Des formats simples, pensés pour que chacun trouve sa place dans le mouvement. Cours collectifs du vendredi, Labs de recherche guidée le samedi, workshops immersifs et accompagnement d’artistes. L’idée&nbsp;: partir de toi, rendre ta danse lisible et ta présence évidente.
     </p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="#choreo-section">Voir les cours hebdomadaires</a>
-      <a class="btn btn-ghost" href="https://wa.me/33663841018" target="_blank" rel="noopener">Parler de ton projet 15 min</a>
+      <a class="btn btn-ghost" href="https://wa.me/33663841018" target="_blank" rel="noopener">Parler de ton projet 15&nbsp;min</a>
     </div>
   </section>
 
-  <!-- CHOREO -->
   <section class="section" id="choreo-section">
     <div class="section-head">
       <h2>HipHop Choreo · vendredi 20h30 · 22h00</h2>
       <p class="section-tagline">Une choré claire, musicale, agréable à danser et à regarder.</p>
       <p class="section-intro">
-        On utilise la chorégraphie comme prétexte pour fixer des bases, travailler la musicalité et affiner l’intention. Tu repars avec des gestes précis, une meilleure lecture du son et des outils réutilisables dans ton freestyle.
+        J’utilise la chorégraphie comme prétexte pour fixer des bases, travailler la musicalité et affiner l’intention. Tu repars avec des gestes précis, une meilleure lecture du son et des outils réutilisables dans ton freestyle.
       </p>
     </div>
 
@@ -99,7 +104,7 @@
       <article class="card-slide">
         <h3>Lieu</h3>
         <p>
-          Centre de Danse du Marais, salle Mozart. Studio central, parquet confortable, sono propre. Accès simple en métro, nombreux cafés et restaus autour pour débriefer après le cours.
+          Centre de Danse du Marais, salle Mozart. Studio central, parquet confortable, sono propre. Accès simple en métro, cafés et restaus autour pour débriefer après le cours.
         </p>
       </article>
 
@@ -120,13 +125,12 @@
       <article class="card-slide">
         <h3>Esprit du cours</h3>
         <p>
-          Exigence juste, humour, bienveillance. Droit à l’essai, droit à l’erreur. L’idée, c’est de progresser ensemble, sans jugement, tout en gagnant en précision et en présence.
+          Exigence juste, humour, bienveillance. Droit à l’essai, droit à l’erreur. L’idée, c’est de progresser ensemble sans jugement, tout en gagnant en précision et en présence.
         </p>
       </article>
     </div>
   </section>
 
-  <!-- LAB -->
   <section class="section" id="lab-section">
     <div class="section-head">
       <h2>HipHopLab · samedi 10h00 · 12h00</h2>
@@ -202,13 +206,12 @@
     </div>
   </section>
 
-  <!-- WORKSHOPS -->
   <section class="section" id="workshops">
     <div class="section-head">
       <h2>Workshops</h2>
       <p class="section-tagline">Pour écoles, studios, structures et événements.</p>
       <p class="section-intro">
-        J’interviens en France, en Belgique et à l’étranger pour des workshops ponctuels ou des cycles plus longs. On définit ensemble le format, le niveau et le thème, en fonction de votre public et de vos objectifs.
+        J’interviens en France, en Belgique et à l’étranger pour des workshops ponctuels ou des cycles plus longs. On définit ensemble le format, le niveau et le thème en fonction de votre public et de vos objectifs.
       </p>
     </div>
 
@@ -223,7 +226,7 @@
       <article class="card-slide">
         <h3>Événements</h3>
         <p>
-          Animations, démonstrations, formats participatifs, direction de mouvement pour présenter votre équipe ou votre marque sous un angle vivant et sincère.
+          Animations, démonstrations, formats participatifs, direction de mouvement pour présenter votre équipe ou votre univers sous un angle vivant et sincère.
         </p>
       </article>
 
@@ -236,7 +239,6 @@
     </div>
   </section>
 
-  <!-- ARTISTS -->
   <section class="section" id="artists">
     <div class="section-head">
       <h2>Accompagnement d’artistes</h2>
@@ -247,30 +249,29 @@
     </div>
 
     <div class="card-scroller" data-scroller>
-      <article class="card-slide" id="coach-presence">
+      <article class="card-slide">
         <h3>Coaching de présence</h3>
         <p>
           Posture, regard, gestion du trac, prise de parole, rapport au micro, à la scène ou à la caméra. On travaille sur ton naturel, pas sur un costume forcé.
         </p>
       </article>
 
-      <article class="card-slide" id="move-dir">
+      <article class="card-slide">
         <h3>Direction de mouvement</h3>
         <p>
-          Pour clips, lives, tournages, campagnes. Je conçois avec toi un vocabulaire de mouvement, je guide les non-danseurs et les danseurs, j’aide à organiser l’espace et les dynamiques.
+          Pour clips, lives, tournages, campagnes. On construit un vocabulaire de mouvement cohérent avec ton univers, on guide danseurs et non-danseurs et on organise l’espace pour que l’image reste forte et lisible.
         </p>
       </article>
 
-      <article class="card-slide" id="choreo-clips">
+      <article class="card-slide">
         <h3>Choré clips et live</h3>
         <p>
-          Création sur mesure, avec ou sans danseurs. Possibilité de faire appel à d’autres spécialistes selon l’univers souhaité. On pense énergie, lisibilité et efficacité à l’image.
+          Création sur mesure, avec ou sans danseurs. Possibilité de faire appel à d’autres spécialistes selon le style souhaité. On pense énergie, musicalité, lisibilité à l’image et sur scène.
         </p>
       </article>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section class="section" id="about">
     <div class="section-head">
       <h2>À propos</h2>
@@ -279,10 +280,11 @@
     <div class="about-grid">
       <p class="about-text">
         Je m’appelle Krees. Danseur, chorégraphe et directeur de mouvement, ancré dans le freestyle hip hop.  
-        Installé à Bruxelles, je travaille entre Paris, la Belgique et l’Europe depuis plus de quinze ans.  
-        J’ai tourné, performé et enseigné pour des scènes, des marques et des artistes très différents, avec toujours la même idée&nbsp;: mettre la musique, la clarté et l’honnêteté du geste au centre.
+        Je travaille sur les scènes françaises, belges et internationales depuis plus de quinze ans.  
+        Aujourd’hui je suis installé à Bruxelles et je navigue entre Paris, la Belgique et l’Europe, entre plateaux, studios, ateliers et accompagnements.
         <br><br>
-        En cours comme en coaching, je ne cherche pas à te faire rentrer dans une case&nbsp;: je t’aide plutôt à affiner ta manière propre de bouger, pour que tu puisses l’assumer, la partager et la faire évoluer.
+        J’ai dansé, créé et transmis pour des contextes très différents, de la scène aux battles en passant par les marques, les clips et les festivals.  
+        Dans tous ces formats, je garde la même ligne&nbsp;: la musique d’abord, la clarté du geste, et une esthétique honnête, qui part vraiment de la personne que j’ai en face de moi.
       </p>
 
       <div class="trust-wrap">
@@ -301,24 +303,35 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="section-head">
       <h2>Contact</h2>
     </div>
     <p class="contact-lead">
-      Pour toute question ou inscription, passe par WhatsApp ou Instagram.  
+      Pour les questions et inscriptions, passe par WhatsApp ou Instagram.  
       Pour les devis et projets (workshops, accompagnement d’artiste, direction de mouvement), utilise le mail pro.
     </p>
 
     <div class="contact-actions">
       <a class="icon-link" href="https://wa.me/33663841018" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3C9.4 3 4 8.3 4 14.8c0 2.6.9 5 2.4 7L4 29l7.4-2.4c2 1.1 4.2 1.7 6.6 1.7 6.6 0 12-5.3 12-11.8C30 8.3 22.6 3 16 3z"/>
+          <path d="M22 18.8c-.3-.2-1.8-.9-2.1-1s-.5-.2-.8.2-1 1.1-1.2 1.3-.4.3-.7.1c-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.4s0-.5.2-.7l.4-.5c.1-.2.2-.4.3-.6.1-.2.1-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.3 2.3 3.6 5.6 5c3.3 1.4 3.3.9 3.9.9.6-.1 1.9-.7 2.2-1.5.3-.8.3-1.4.2-1.6 0-.1-.3-.3-.6-.5z"/>
+        </svg>
         <span>WhatsApp</span>
       </a>
       <a class="icon-link" href="https://www.instagram.com/kreesama" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2.3c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .5 1.5 1 .5.5.8.9 1 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.5 1-1 1.5-.5.5-.9.8-1.5 1-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.5-1.5-1-.5-.5-.8-.9-1-1.5-.2-.5-.3-1.2-.4-2.4C2.3 15.6 2.3 15.2 2.3 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.5-1 1-1.5.5-.5.9-.8 1.5-1 .5-.2 1.2-.3 2.4-.4C8.4 2.3 8.8 2.3 12 2.3z"/>
+          <path d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.3A4.1 4.1 0 1 1 16.1 12 4.1 4.1 0 0 1 12 16.1z"/>
+          <circle cx="18.4" cy="5.6" r="1.1"/>
+        </svg>
         <span>Instagram</span>
       </a>
       <a class="icon-link" href="mailto:krees.sama@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.6 2l7.1 4.9c.2.1.4.1.6 0L19.4 7H4.6zm15.4 1.5-6.4 4.4a2.6 2.6 0 0 1-2.8 0L4.4 8.5V17h15.6V8.5z"/>
+        </svg>
         <span>krees.sama@gmail.com</span>
       </a>
     </div>
