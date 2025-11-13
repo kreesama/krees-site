@@ -1,4 +1,6 @@
-// sticky header : disparaît en scroll bas, revient en scroll haut
+// script.js
+
+// header sticky : cache en scroll bas, montre en scroll haut
 let lastY = window.scrollY;
 const header = document.querySelector('.site-header');
 
@@ -13,7 +15,7 @@ window.addEventListener('scroll', () => {
   lastY = y;
 });
 
-// carrousels horizontaux (choreo, lab, thèmes, workshops, artistes)
+// carrousels horizontaux
 document.querySelectorAll('[data-scroller]').forEach(scroller => {
   scroller.addEventListener('wheel', e => {
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
@@ -28,7 +30,7 @@ document.querySelectorAll('[data-scroller]').forEach(scroller => {
   });
 });
 
-// smooth scroll pour les ancres
+// smooth scroll ancres internes
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const id = link.getAttribute('href').slice(1);
@@ -40,7 +42,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// burger + sous menus en mobile
+// burger + sous menus mobile
 const burger = document.querySelector('.burger');
 const nav = document.getElementById('nav');
 
